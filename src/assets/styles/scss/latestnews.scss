@@ -1,0 +1,102 @@
+.latestnews {
+  padding: 22px 10px 22px 0;
+  border-radius: 22px;
+  border: 2px solid #2c2c2c;
+  background: #0f0f0f;
+  
+  width: 600px; //delete
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    row-gap: 18px;
+    align-self: stretch;
+    flex-wrap: wrap;
+    padding: 0 32px;
+    margin-bottom: 22px;
+  }
+
+  &__item-link {
+    text-decoration: none;
+  }
+
+  &__title {
+    color: #fafafa;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__arrowicon {
+    width: 32px;
+    height: 32px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 0 32px;
+
+    overflow: auto;
+    max-height: 564px; //delete
+
+    &::-webkit-scrollbar {
+      width: 6px; /* Ширина скроллбара */
+    }
+    
+    /* Ползунок скроллбара */
+    &::-webkit-scrollbar-thumb {
+      background-color: #2c2c2c; /* Цвет ползунка */
+      border-radius: 5px; /* Закругление углов ползунка */
+    }
+    
+    /* Ползунок скроллбара при наведении */
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #888; /* Цвет ползунка при наведении */
+    }
+    
+    /* Трек скроллбара */
+    &::-webkit-scrollbar-track {
+      background-color: #0f0f0f; /* Цвет трека */
+    }
+    
+    /* Кнопки (стрелки) скроллбара */
+    &::-webkit-scrollbar-button {
+      display: none; /* Скрываем кнопки */
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+
+    &-title {
+      color: #fafafa;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    &-description {
+      color: #888;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    &-hr {
+      width: 100%;
+      height: 1px;
+      border-color: #2c2c2c;
+    }
+  }
+}

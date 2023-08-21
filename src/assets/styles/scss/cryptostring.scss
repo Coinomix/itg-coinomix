@@ -1,0 +1,12 @@
+.cryptostring {
+  overflow: hidden;
+
+  &__text {
+    font-size: 6px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    color: #fafafa;
+    margin: 20px 0;
+  }
+}

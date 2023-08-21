@@ -1,0 +1,18 @@
+.cardnews {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 340px;
+  padding: 32px;
+
+  border-radius: 22px;
+  border: 2px solid #2C2C2C;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.74) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(91deg, #6F55B4 0%, #DB45D1 100%);
+  
+  &__container {
+    border-radius: 22px;
+    border: 2px solid #2C2C2C;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.74) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(91deg, #6F55B4 0%, #DB45D1 100%);
+  }
+}

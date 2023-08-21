@@ -7,21 +7,47 @@
     justify-content: space-between;
     padding: 28px 40px;
     width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
   
     &__burger {
       height: 48px;
       width: 48px;
+      background-color: transparent;
       background-image: url("../../images/burger.svg");
       background-repeat: no-repeat;
       background-size: cover;
+      border: none;
+      cursor: pointer;
     }
+
+    &__user {
+      width: 48px;
+      height: 48px;
+      padding: 4px;
+    }
+
+    &__user-photo {
+        height: 40px;
+        width: 40px;
+        border: 2px solid transparent;
+        border-radius: 50%;
+
+        &:hover {
+          border-color: #94CBFD #8CF8E5 #8CF8E5 #94CBFD;
+          cursor: pointer;
+        }
+      }
   
     &__no-user {
         height: 48px;
         width: 48px;
-        background-image: url("../../images/no_user.svg");
+        background-image: url("../../images/header/no_user.svg");
         background-repeat: no-repeat;
         background-size: cover;
+        cursor: pointer;
       }
   }
   
