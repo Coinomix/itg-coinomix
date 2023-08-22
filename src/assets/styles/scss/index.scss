@@ -1,11 +1,14 @@
 @import "./normalize.scss";
 @import "./global.scss";
-@import "./vars.scss";
 @import "./header.scss";
 @import "./footer.scss";
+@import "./main.scss";
 @import "./cardnews.scss";
+@import "./cardtags.scss";
+@import "./cardnewstop.scss";
 @import "./cryptostring.scss";
 @import "./latestnews.scss";
-@import "./main.scss";
+@import "../utils//mixins";
+@import "../utils//variables";
 
 // @import '~bootstrap/scss/bootstrap';

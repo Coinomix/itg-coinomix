@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import logoCoinomix from "../../assets/images/coinimix-logo.svg"
-import demoUserImage from "../../assets/images/header/demo_user.png"
+import demoUserImage from "../../assets/images/header/demo_user.jpg"
 
 
 export const Header = () => {

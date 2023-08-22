@@ -4,9 +4,11 @@ import arrowIcon from "../../assets/images/arrow_icon.svg";
 export const LatestNews = () => {
   return (
     <div className="latestnews">
-      <div className="latestnews__header">
+      <div className="latestnews__head">
         <h2 className="latestnews__title">Latest News</h2>
-        <img className="latestnews__arrowicon" src={arrowIcon} alt="Latest news icon" />
+        <a href="/">
+          <img className="latestnews__arrowicon" src={arrowIcon} alt="Latest news icon" />
+        </a>
       </div>
       
       <div className="latestnews__container">

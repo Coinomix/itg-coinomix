@@ -3,9 +3,13 @@ html {
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
-  line-height: 18px; /* 90% */
+  line-height: normal; /* 18px */
   color: #fff;
   background-color: #0f0f0f;
+}
+
+a {
+  text-decoration: none;
 }
 
 .coinimix-logo {
