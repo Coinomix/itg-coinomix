@@ -1,13 +1,102 @@
 .cardnews {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  height: 340px;
+  position: relative;
+  overflow: hidden;
+  height: 480px;
   padding: 32px;
-
   border-radius: 22px;
   border: 2px solid #2C2C2C;
   background: linear-gradient(91deg, #6F55B4 0%, #DB45D1 100%);
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  &__title {
+    width: 50%;
+
+    &-link {
+      color: #FAFAFA;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-decoration: none;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    &-link {
+      color: #FAFAFA;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-decoration: none;
+    }
+
+    &-date {
+      color: #FAFAFA;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    &-content {
+      display: flex;
+      align-items: center;
+      color: #FAFAFA;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+
   
 }

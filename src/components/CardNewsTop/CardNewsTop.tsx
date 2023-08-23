@@ -13,13 +13,15 @@ export const CardNewsTop: React.FC<Props> = ({
   return (
     <div className="cardnewstop">
       <div className="cardnewstop__left">
-        <img 
-          src={ImgTestPost} 
-          className="cardnewstop__image"
-        />
+        {ImgTestPost && (
+          <img 
+            src={ImgTestPost} 
+            className="cardnewstop__image"
+          />
+        )}
         <div className="cardnewstop__tags">
-          <a href="#bitcoin" className="cardtags__tagname">Bitcoin</a>
-          <a href="#trading" className="cardtags__tagname">Trading</a>
+          <a href="#bitcoin" className="cardnewstop__tagname">Bitcoin</a>
+          <a href="#trading" className="cardnewstop__tagname">Trading</a>
         </div>
       </div>
       <div className="cardnewstop__right">
@@ -39,8 +41,8 @@ export const CardNewsTop: React.FC<Props> = ({
               <img src={demoUserImage} alt="Demo user author" className="cardnewstop__author-photo" />
             </a>
             <div className="cardnewstop__author-name">
-            <a href="/" className="cardnewstop__author-link">Chris Moore</a>
-              <span className="cardnewstop__date">2 hours ago</span>
+              <a href="/" className="cardnewstop__author-link">Chris Moore</a>
+              <span className="cardnewstop__date">Sep 10, 2023</span>
             </div>
           </div>
           <a href="/">

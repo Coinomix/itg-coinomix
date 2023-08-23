@@ -9,6 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
   }
 
@@ -42,9 +43,9 @@
 
   &__link-container {
     display: flex;
-    padding: 10px 16px;
     justify-content: center;
     align-items: center;
+    padding: 10px 16px;
   }
 
   &__link {

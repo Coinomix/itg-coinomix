@@ -4,7 +4,7 @@
   border: 2px solid #2c2c2c;
   background: #0f0f0f;
   
-  width: 600px; //delete
+  // width: 600px; //delete
 
   &__head {
     display: flex;
@@ -16,6 +16,7 @@
     flex-wrap: wrap;
     padding: 0 32px;
     margin-bottom: 22px;
+    box-sizing: border-box;
   }
 
   &__item-link {
