@@ -1,3 +1,6 @@
+@import '~bootstrap/scss/bootstrap';
+@import "../utils/mixins";
+// @import "../utils/variables";
 @import "./normalize.scss";
 @import "./global.scss";
 @import "./header.scss";
@@ -10,9 +13,5 @@
 @import "./cardbanner.scss";
 @import "./cryptostring.scss";
 @import "./latestnews.scss";
-@import "../utils//mixins";
-@import "../utils//variables";
 
 // @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css');
-
-// @import '~bootstrap/scss/bootstrap';
