@@ -1,5 +1,5 @@
 import React from "react";
-import arrowIcon from "../../assets/images/arrow_icon.svg";
+import { CardTags } from "../CardTags";
 
 interface Props {
   imgUrl?: string;
@@ -18,14 +18,7 @@ export const CardNewsSmall: React.FC<Props> = ({
       )}
       <div className="cardnews-small__content">
         <div className="cardnews-small__head">
-          <div className="cardnews-small__tags">
-            <a href="#bitcoin" className="cardnews-small__tagname">Bitcoin</a>
-            <a href="#trading" className="cardnews-small__tagname">Trading</a>
-          </div>
-
-          <a href="/">
-            <img className="cardnews-small__arrowicon" src={arrowIcon} alt="Arrow Icon" />
-          </a>
+          <CardTags />
         </div>
 
         <div className="cardnews-small__title">

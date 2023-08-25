@@ -5,7 +5,7 @@ export const LatestNews = () => {
   return (
     <div className="latestnews">
       <div className="latestnews__head">
-        <h2 className="latestnews__title">Latest News</h2>
+        <h2 className="latestnews__title">Latest news</h2>
         <a href="/">
           <img className="latestnews__arrowicon" src={arrowIcon} alt="Latest news icon" />
         </a>

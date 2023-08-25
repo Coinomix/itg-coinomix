@@ -1,8 +1,11 @@
 import React from "react";
 import arrowIcon from "../../assets/images/arrow_icon.svg";
 
-export const CardTags = () => {
+interface Props {
+  isArrow?: boolean;
+}
 
+export const CardTags: React.FC<Props> = ({ isArrow = true }) => {
   return (
     <div className="cardtags">
       <div className="cardtags__tags">
@@ -10,9 +13,11 @@ export const CardTags = () => {
         <a href="#trading" className="cardtags__tagname">Trading</a>
       </div>
 
-      <a href="/">
-        <img className="cardtags__arrowicon" src={arrowIcon} alt="Arrow Icon" />
-      </a>
+      {isArrow && (
+        <a href="/">
+          <img className="cardtags__arrowicon" src={arrowIcon} alt="Arrow Icon" />
+        </a>
+      )}
     </div>
   );
 };

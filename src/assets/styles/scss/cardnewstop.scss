@@ -14,7 +14,6 @@
     overflow: hidden;
     width: 50%;
     height: 516px;
-    padding: 32px;
     border-radius: 22px;
     border-radius: 22px;
   }
@@ -33,25 +32,9 @@
   &__tags {
     position: relative;
     z-index: 1;
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  &__tagname {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 22px;
-    border-radius: 22px;
-    border: 1px solid #FAFAFA;
-    color: #FAFAFA;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-decoration: none;
+    padding: 32px;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.74) 0%, rgba(0, 0, 0, 0.00) 100%);
   }
 
   &__right {

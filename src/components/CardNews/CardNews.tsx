@@ -1,26 +1,24 @@
 import React from "react";
-import arrowIcon from "../../assets/images/arrow_icon.svg";
+import classNames from 'classnames';
 import { Card } from "react-bootstrap";
-import { CardTags } from "../CardTags/CardTags";
+import { CardTags } from "../CardTags";
 import { Article } from "../../type/article";
 import favoriteIcon from "../../assets/images/favorite.svg";
 import commentIcon from "../../assets/images/comment.svg";
 import regroupIcon from "../../assets/images/regroup.svg";
+import { CardNewsType } from "../../type/CardNewsType";
 
 interface Props {
-  isTop?: boolean;
   imgUrl?: string;
+  type?: CardNewsType;
 }
 
 export const CardNews: React.FC<Props> = ({
   imgUrl = '',
-  isTop = false,
-}) => {
-  let elementHeight = "";
-  isTop ? elementHeight = "564px" : elementHeight = "";
-  
+  type,
+}) => { 
   return (
-    <div className="cardnews" style={{ height: elementHeight }}>
+    <div className="cardnews" style={{ height: type }}>
       {imgUrl && (
         <img 
           src={imgUrl} 
@@ -31,7 +29,10 @@ export const CardNews: React.FC<Props> = ({
         <div className="cardnews__head">
           <CardTags />
 
-          <div className="cardnews__title">
+          <div className={classNames('cardnews__title', {
+          'cardnews__title-top': type === CardNewsType.top,
+        })}> 
+          {/* // isTop chahge classname */}
             <a href="/" className="cardnews__title-link">
               Bitcoin offshore and the end of mining: how the world of cryptocurrencies is changing in 2023
             </a>
@@ -45,7 +46,7 @@ export const CardNews: React.FC<Props> = ({
             <p className="cardnews__author-date">9:00 AM GMT</p>
           </div>
 
-          {isTop && (
+          {type === CardNewsType.top && (
             <div className="cardnews__social">
               <div className="cardnews__social-content">
                 <img src={favoriteIcon} className="cardnews__icon"/>

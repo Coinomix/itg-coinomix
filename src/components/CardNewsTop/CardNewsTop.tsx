@@ -2,14 +2,10 @@ import React from "react";
 import ImgTestPost from "../../assets/images/test-post.png";
 import demoUserImage from "../../assets/images/header/demo_user.jpg";
 import arrowIcon from "../../assets/images/arrow_icon.svg";
+import { Card } from "react-bootstrap";
+import { CardTags } from "../CardTags";
 
-interface Props {
-  id?: string;
-}
-
-export const CardNewsTop: React.FC<Props> = ({
-  id,
-}) => {
+export const CardNewsTop = () => {
   return (
     <div className="cardnewstop">
       <div className="cardnewstop__left">
@@ -20,8 +16,7 @@ export const CardNewsTop: React.FC<Props> = ({
           />
         )}
         <div className="cardnewstop__tags">
-          <a href="#bitcoin" className="cardnewstop__tagname">Bitcoin</a>
-          <a href="#trading" className="cardnewstop__tagname">Trading</a>
+          <CardTags isArrow={false} />
         </div>
       </div>
       <div className="cardnewstop__right">

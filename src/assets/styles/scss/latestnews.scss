@@ -3,8 +3,6 @@
   border-radius: 22px;
   border: 2px solid #2c2c2c;
   background: #0f0f0f;
-  
-  // width: 600px; //delete
 
   &__head {
     display: flex;
@@ -44,31 +42,27 @@
     padding: 0 32px;
 
     overflow: auto;
-    max-height: 460px;
+    max-height: 455px;
 
     &::-webkit-scrollbar {
       width: 6px; /* Ширина скроллбара */
-    }
-    
-    /* Ползунок скроллбара */
-    &::-webkit-scrollbar-thumb {
-      background-color: #2c2c2c; /* Цвет ползунка */
-      border-radius: 5px; /* Закругление углов ползунка */
-    }
-    
-    /* Ползунок скроллбара при наведении */
-    &::-webkit-scrollbar-thumb:hover {
-      background-color: #888; /* Цвет ползунка при наведении */
-    }
-    
-    /* Трек скроллбара */
-    &::-webkit-scrollbar-track {
-      background-color: #0f0f0f; /* Цвет трека */
-    }
-    
-    /* Кнопки (стрелки) скроллбара */
-    &::-webkit-scrollbar-button {
-      display: none; /* Скрываем кнопки */
+
+      &-thumb {
+        background-color: #2c2c2c; /* Цвет ползунка */
+        border-radius: 5px;
+  
+        &:hover {
+          background-color: #888;
+        }
+      }
+
+      &-track {
+        background-color: #0f0f0f; /* Цвет трека */
+      }
+
+      &-button {
+        display: none; /* Скрываем кнопки */
+      }
     }
   }
 
@@ -76,6 +70,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    align-content: flex-start;
+    align-self: flex-start;
     gap: 14px;
 
     &-title {

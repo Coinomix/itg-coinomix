@@ -65,7 +65,24 @@
     }
   }
 
-  &__devider {
-    margin: 20px 0;
+  &__macroeconomics {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+
+    @media (max-width: 1060px) {
+      flex-wrap: wrap;
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      
+    }
   }
 }
