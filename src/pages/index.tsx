@@ -1,19 +1,17 @@
-import * as React from "react"
-import type { HeadFC, PageProps } from "gatsby"
-import { Footer } from "../components/Footer"
-import { Header } from "../components/Header"
-import "../assets/styles/scss/index.scss"
-import { CardNews } from "../components/CardNews"
-import { CryptoString } from "../components/CryptoString"
-import { LatestNews } from "../components/LatestNews"
-import { CardNewsTop } from "../components/CardNewsTop"
-import { CardNewsSmall } from "../components/CardNewsSmall"
-import { CardBanner } from "../components/CardBanner"
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import { Devider } from "../components/Devider"
-import { CardNewsType } from "../type/CardNewsType"
+import * as React from "react";
+import type { HeadFC, PageProps } from "gatsby";
+import { Footer } from "../components/Footer";
+import { Header } from "../components/Header";
+import "../assets/styles/scss/index.scss";
+import { CardNews } from "../components/CardNews";
+import { CryptoString } from "../components/CryptoString";
+import { LatestNews } from "../components/LatestNews";
+import { CardNewsTop } from "../components/CardNewsTop";
+import { CardNewsSmall } from "../components/CardNewsSmall";
+import { CardBanner } from "../components/CardBanner";
+import { Container, Row, Col, Stack } from "react-bootstrap";
+import { Devider } from "../components/Devider";
+import { CardNewsType } from "../type/CardNewsType";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -73,25 +71,35 @@ const IndexPage: React.FC<PageProps> = () => {
             <a href="/" className="main__section-readmore">Read more</a>
         </section>
 
-        <Container fluid={true}>
+        {/* <Container fluid={true} className="">
           <Row>
-            <Col sm={12} md={12} lg={4} className="g-4">
+            <Col sm={12} md={12} lg={4} className="">
               <CardNewsSmall imgUrl="https://s3-alpha-sig.figma.com/img/14a7/9c9b/51308c627efee3fe8348e7261421b20f?Expires=1693785600&Signature=XtnYgBeQp9pkP20U0N-lKIRqEmZm2~ovo5bz842irxUoUO2Z82GAkflpcoXESpzDmij4yBkWwOJe2dmcOY3xRu-0oA7mOO2pF~W~eidDGeOYWu8KUTHyYu1h0~Xg9pjiCah~~iuiCjwFdrH6s9gt99t89KC1OZifReUgvJ8WzsxdYvlSXazNBPDgiyTPihaQtdbeCiEnQMIfDk5gLyg8rjSs5Z20zpEM3cUM5ytWEfDyLyA8Gqt1GhS1y6hjBTLEYq-PlCC4PH1Fywt9cJ89YnCoKul9ApyNV-tqZzXMwQHh-GltkU09FvnSsTICA-Xy3GrL-994IHYMOPPbHvgL5A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
             </Col>
-            <Col sm={12} md={12} lg={8} className="g-4">
+            <Col sm={12} md={12} lg={8} className="">
               <CardNewsSmall imgUrl="https://s3-alpha-sig.figma.com/img/87e7/24ec/71ec9aa635af1efb5ac0f82558490978?Expires=1693785600&Signature=fkBuRjw9qgZYkqgzluSNMjvVe7esXsqKMSP7K50xgHEMhJ2~g3p2qL30YJ8sDC3LvxBmtn9Msm-H~O~xpQOw1vwfUIB0Sd488Qj6rTiFIvdU4jrEZwJrIohGyADerjk43Xe6gCyT4GmSxzQrZk4mtJcBwzAMafoA60RjhA8RnOq01WJi9Yyio-RzYDaFVp9UKLyOoKD3OYGVC35cuQ1Ge8CyGvKh2WKoC10xnkZ5nBGMADmQ8dzvZ6hUeRGlp6rnWLT9AzPedRlR7Y2hCmQ~o3ZWcGbtrvQ5f8W7KvFoIyN~r~kk53nB9pWRXMyjze3KyLX3I-IevYmvNkyuujIcQA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
             </Col>
-            <Col sm={12} md={12} lg={4} style={{ margin: '0', padding: '0' }}>
-              <CardNewsSmall imgUrl="https://s3-alpha-sig.figma.com/img/80d0/b769/e5a8e0aa812a3d77a681355fa99a4a3e?Expires=1693785600&Signature=Z5mKEqV5QRwMR6YvcFFGkLJ9YawtN2I3c1xk1Ct652CM-cStqPYpDvr000pKMrpqAZRbsDWxrXrhHayu6OM5-2lS4VidE7GFd1E3mvEHsm2m24vAsFedV5gUcXGNb2kEN5F6OfYtjX~fFYAIcR0myKdCmM84tn8idFlzBFwsQ7t32-KGtmdlq1Ep~yyMUEUQ5BxQSWG1o6K6sJmCl2LJk4ubxraGfkT-QuqhqxAtwUAKsWAQQr-DtsJlYU29g~4B64LmevPCJFLyLoOCVuOo0nYWG3fBycRexCw6afR82ycRN9weFqogU0NAurQfApt0oC1fq4tOgjUHQ7-WfbJ24g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
-            </Col>
-            <Col sm={12} md={12} lg={4} style={{ margin: '0', padding: '0' }}>
-              <CardNewsSmall imgUrl="https://s3-alpha-sig.figma.com/img/f68d/8c6e/5b41a13157af6851a6f794f9c7dbb152?Expires=1693785600&Signature=NwPhiFP~y4JQ4i9Hy8E1Y~YCquGrheze3BerIBBS09rZB~mmuDtBIL6wBLTZrAOa9WEKbLII1QU7uzJsVNyqeErBPTEz4FpF5SLSfXhc5evOB0g9UdUh8NpxrCn~4QTJZ6vSkLTRGbGccYzowvvpqztJK6Fawy3KqEIrKEbRK7W19-KfaTYHYURyCZIYstIn8LCibEj81l-ZhSb9QywyZobADv2VYGqMprB4oDRzt1h5QlyZnNmRny-y-7XjzgGnT8L7M8UeCfdZS73LLw9yJLyhZd7queMfVfbTdfXeFdmljjSOV2XWAIUnkl-iJ-cpshEt6VlI2V85nRbTtaK9yA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
-            </Col>
-            <Col sm={12} md={12} lg={4} style={{ margin: '0', padding: '0' }}>
+          </Row>
+        </Container> */}
+
+        <Stack gap={3} direction="horizontal">
+          <Row>
+            <Col sm={12} md={12} lg={4} className="">
               <CardNewsSmall imgUrl="https://s3-alpha-sig.figma.com/img/14a7/9c9b/51308c627efee3fe8348e7261421b20f?Expires=1693785600&Signature=XtnYgBeQp9pkP20U0N-lKIRqEmZm2~ovo5bz842irxUoUO2Z82GAkflpcoXESpzDmij4yBkWwOJe2dmcOY3xRu-0oA7mOO2pF~W~eidDGeOYWu8KUTHyYu1h0~Xg9pjiCah~~iuiCjwFdrH6s9gt99t89KC1OZifReUgvJ8WzsxdYvlSXazNBPDgiyTPihaQtdbeCiEnQMIfDk5gLyg8rjSs5Z20zpEM3cUM5ytWEfDyLyA8Gqt1GhS1y6hjBTLEYq-PlCC4PH1Fywt9cJ89YnCoKul9ApyNV-tqZzXMwQHh-GltkU09FvnSsTICA-Xy3GrL-994IHYMOPPbHvgL5A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
             </Col>
+            <Col sm={12} md={12} lg={8} className="">
+              <CardNewsSmall imgUrl="https://s3-alpha-sig.figma.com/img/87e7/24ec/71ec9aa635af1efb5ac0f82558490978?Expires=1693785600&Signature=fkBuRjw9qgZYkqgzluSNMjvVe7esXsqKMSP7K50xgHEMhJ2~g3p2qL30YJ8sDC3LvxBmtn9Msm-H~O~xpQOw1vwfUIB0Sd488Qj6rTiFIvdU4jrEZwJrIohGyADerjk43Xe6gCyT4GmSxzQrZk4mtJcBwzAMafoA60RjhA8RnOq01WJi9Yyio-RzYDaFVp9UKLyOoKD3OYGVC35cuQ1Ge8CyGvKh2WKoC10xnkZ5nBGMADmQ8dzvZ6hUeRGlp6rnWLT9AzPedRlR7Y2hCmQ~o3ZWcGbtrvQ5f8W7KvFoIyN~r~kk53nB9pWRXMyjze3KyLX3I-IevYmvNkyuujIcQA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
+            </Col>
           </Row>
-        </Container>
+        </Stack>
+
+        <Devider />
+
+        <Stack gap={3} direction="horizontal">
+          <CardNewsSmall imgUrl="https://s3-alpha-sig.figma.com/img/80d0/b769/e5a8e0aa812a3d77a681355fa99a4a3e?Expires=1693785600&Signature=Z5mKEqV5QRwMR6YvcFFGkLJ9YawtN2I3c1xk1Ct652CM-cStqPYpDvr000pKMrpqAZRbsDWxrXrhHayu6OM5-2lS4VidE7GFd1E3mvEHsm2m24vAsFedV5gUcXGNb2kEN5F6OfYtjX~fFYAIcR0myKdCmM84tn8idFlzBFwsQ7t32-KGtmdlq1Ep~yyMUEUQ5BxQSWG1o6K6sJmCl2LJk4ubxraGfkT-QuqhqxAtwUAKsWAQQr-DtsJlYU29g~4B64LmevPCJFLyLoOCVuOo0nYWG3fBycRexCw6afR82ycRN9weFqogU0NAurQfApt0oC1fq4tOgjUHQ7-WfbJ24g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
+          <CardNewsSmall imgUrl="https://s3-alpha-sig.figma.com/img/f68d/8c6e/5b41a13157af6851a6f794f9c7dbb152?Expires=1693785600&Signature=NwPhiFP~y4JQ4i9Hy8E1Y~YCquGrheze3BerIBBS09rZB~mmuDtBIL6wBLTZrAOa9WEKbLII1QU7uzJsVNyqeErBPTEz4FpF5SLSfXhc5evOB0g9UdUh8NpxrCn~4QTJZ6vSkLTRGbGccYzowvvpqztJK6Fawy3KqEIrKEbRK7W19-KfaTYHYURyCZIYstIn8LCibEj81l-ZhSb9QywyZobADv2VYGqMprB4oDRzt1h5QlyZnNmRny-y-7XjzgGnT8L7M8UeCfdZS73LLw9yJLyhZd7queMfVfbTdfXeFdmljjSOV2XWAIUnkl-iJ-cpshEt6VlI2V85nRbTtaK9yA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
+          <CardNewsSmall imgUrl="https://s3-alpha-sig.figma.com/img/14a7/9c9b/51308c627efee3fe8348e7261421b20f?Expires=1693785600&Signature=XtnYgBeQp9pkP20U0N-lKIRqEmZm2~ovo5bz842irxUoUO2Z82GAkflpcoXESpzDmij4yBkWwOJe2dmcOY3xRu-0oA7mOO2pF~W~eidDGeOYWu8KUTHyYu1h0~Xg9pjiCah~~iuiCjwFdrH6s9gt99t89KC1OZifReUgvJ8WzsxdYvlSXazNBPDgiyTPihaQtdbeCiEnQMIfDk5gLyg8rjSs5Z20zpEM3cUM5ytWEfDyLyA8Gqt1GhS1y6hjBTLEYq-PlCC4PH1Fywt9cJ89YnCoKul9ApyNV-tqZzXMwQHh-GltkU09FvnSsTICA-Xy3GrL-994IHYMOPPbHvgL5A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
+        </Stack>          
 
         <CryptoString />
 

@@ -14,7 +14,7 @@ export const CardTags: React.FC<Props> = ({ isArrow = true }) => {
       </div>
 
       {isArrow && (
-        <a href="/">
+        <a href="#/">
           <img className="cardtags__arrowicon" src={arrowIcon} alt="Arrow Icon" />
         </a>
       )}

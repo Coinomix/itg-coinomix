@@ -26,7 +26,7 @@ The ITG team will provide you with cutting-edge insights from the global market 
 
 ## Installation and Running
 
-1. Clone the repository: `git clone https://github.com/Coinomix/itg-coinomix.git`
+1. Clone the repository: `git clone https://github.com/maksym-didyk/itg-coinomix.git`
 2. Navigate to the project folder: `cd itg-coinomix`
 3. Install dependencies: `npm install`
 4. Start the application: `npm start`
