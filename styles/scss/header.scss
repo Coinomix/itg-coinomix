@@ -1,0 +1,24 @@
+.header {
+    -webkit-backdrop-filter: blur(100px) brightness(100%);
+    align-items: center;
+    backdrop-filter: blur(100px) brightness(100%);
+    background-color: rgba(14, 14, 14, 0.1); // Используем rgba() для установки прозрачности
+    display: flex;
+    justify-content: space-between;
+    padding: 28px 40px;
+    width: 100%;
+  
+    &__burger {
+      height: 48px;
+      width: 48px;
+    }
+  
+    &__no-user {
+        height: 48px;
+        width: 48px;
+        background-image: url("../../images/no_user.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+  }
+  
