@@ -1,8 +1,6 @@
 import React from "react";
-import classNames from 'classnames';
-import { Card } from "react-bootstrap";
+import classNames from "classnames";
 import { CardTags } from "../CardTags";
-import { Article } from "../../type/article";
 import favoriteIcon from "../../assets/images/favorite.svg";
 import commentIcon from "../../assets/images/comment.svg";
 import regroupIcon from "../../assets/images/regroup.svg";

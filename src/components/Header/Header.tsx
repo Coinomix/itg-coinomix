@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Button from 'react-bootstrap/Button';
-import Offcanvas from 'react-bootstrap/Offcanvas';
 import { StaticImage } from "gatsby-plugin-image";
 import logoCoinomix from "../../assets/images/coinimix-logo.svg";
 import demoUserImage from "../../assets/images/header/demo_user.jpg";
@@ -31,12 +29,13 @@ export const Header = () => {
 
         <div className="header__no-user" onClick={() => setModalShow(true)}></div>
 
-        <SingIn 
+        {/* <SingIn 
           show={modalShow}
-          onHide={() => setModalShow(false)}
-        />
+          onHide={() => setModalShow(false)
+          }
+        /> */}
 
-        <Offcanvas show={show} onHide={handleClose}>
+        {/* <Offcanvas show={show} onHide={handleClose} scroll>
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>Offcanvas</Offcanvas.Title>
           </Offcanvas.Header>`
@@ -44,7 +43,7 @@ export const Header = () => {
             Some text as placeholder. In real life you can have the elements you
             have chosen. Like, text, images, lists, etc.
           </Offcanvas.Body>
-      </Offcanvas>
+      </Offcanvas> */}
     </header>
   );
 };
