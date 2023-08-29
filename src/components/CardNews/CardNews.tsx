@@ -1,9 +1,9 @@
 import React from "react";
 import classNames from "classnames";
 import { CardTags } from "../CardTags";
-import favoriteIcon from "../../assets/images/favorite.svg";
-import commentIcon from "../../assets/images/comment.svg";
-import regroupIcon from "../../assets/images/regroup.svg";
+// import favoriteIcon from "../../assets/images/favorite.svg";
+// import commentIcon from "../../assets/images/comment.svg";
+// import regroupIcon from "../../assets/images/regroup.svg";
 import { CardNewsType } from "../../type/CardNewsType";
 
 interface Props {
@@ -30,7 +30,7 @@ export const CardNews: React.FC<Props> = ({
           <div className={classNames('cardnews__title', {
           'cardnews__title-top': type === CardNewsType.top,
         })}> 
-          {/* // isTop chahge classname */}
+
             <a href="/" className="cardnews__title-link">
               Bitcoin offshore and the end of mining: how the world of cryptocurrencies is changing in 2023
             </a>
@@ -44,7 +44,7 @@ export const CardNews: React.FC<Props> = ({
             <p className="cardnews__author-date">9:00 AM GMT</p>
           </div>
 
-          {type === CardNewsType.top && (
+          {/* {type === CardNewsType.top && (
             <div className="cardnews__social">
               <div className="cardnews__social-content">
                 <img src={favoriteIcon} className="cardnews__icon"/>
@@ -60,7 +60,7 @@ export const CardNews: React.FC<Props> = ({
               </div>
             </div>
           )
-            }
+            } */}
 
         </div>
       </div>

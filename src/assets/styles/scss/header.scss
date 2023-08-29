@@ -1,8 +1,8 @@
 .header {
     -webkit-backdrop-filter: blur(100px) brightness(100%);
     align-items: center;
-    backdrop-filter: blur(100px) brightness(100%);
-    background-color: rgba(14, 14, 14, 0.1); // Используем rgba() для установки прозрачности
+    backdrop-filter: blur(50px) brightness(100%);
+    background-color: rgba(15, 15, 15, 0.2); // Используем rgba() для установки прозрачности
     display: flex;
     justify-content: space-between;
     padding: 28px 40px;
