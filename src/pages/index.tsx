@@ -32,10 +32,10 @@ const IndexPage: React.FC<PageProps> = () => {
 
         <CardBanner />
 
-        <section className="main__section">
+        <div className="main__section">
             <h2 className="main__section-title">Cryptocurrency</h2>
             <a href="/" className="main__section-readmore">Read more</a>
-        </section>
+        </div>
 
         <div className="main__container-latestnews">
           <CardNewsSmall imgUrl="http://s3-alpha-sig.figma.com/img/461a/4ca8/8fa691feb0a84208fd3de3d50fb8309c?Expires=1693785600&Signature=IBTzNhz~WDmgy2i-zhMhSR4clnd9vIpjBDxEbPD~ceR7g~RoXLbgQzPPUuHozmq-vBEelVmqx0Sf~21EpHnGpKMX0WiXtTnNDSRfL6mIEiQZOXZPuh5LY2ZukbTUeSrd2F5VfkW-0SG4PwQH5zhEolqdMR2Q1xSDDyZqc6QqxwyyVx0Nn6RabQvrOjOSpQ7eUbfnxkbcvCynWHqUT7gHKT3OT6mk3MSqp8i11NEHACdwA7YsHeVBd47-g4-ub77CXSBYwaLfJhmcwiEweWTJXvuG0X7ASbIoHrRMsOXqtZ3eUQlLvQJ3gd3AmSeRBQ3UwGZSYYh7fhe8ozntJkY~BA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
@@ -51,10 +51,10 @@ const IndexPage: React.FC<PageProps> = () => {
 
         <CardNews imgUrl="https://s3-alpha-sig.figma.com/img/61ca/f182/17ee3b5ad55033ad757c5b9f79dbf2c2?Expires=1693785600&Signature=Z-6~WgzoeA6rX-n7ZTZwqCUgjWTd3XgBXvVsBvrV1ADazJfkgIYXgLNZO8hu~hdG6TsrKMHtbasOtAG5VMd4LSaeZoOPAOZdS1VaCIdixzZsslftYaywqItQDpRNrLXWhgm4X6MvfqCw1Ie0kSV-HGFZgD5eRYbA6Ut-4VzBtjMUDEng7WaFDEY8YAnYQ8xwd5iBtcEDLZNq18GxHxTbEK6BeQEzytSt~~jB4ZhtQIeH9XK5Scnk~cEGnPdLmIZRyIjDi4Pm8Pz5zGKyGMrlM~wxFGxDwVQ2rGrhJXAMOVfabrocC9p9a7asGpScafuPjl8n5M4v9uo8p57mICPErA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
 
-        <section className="main__section">
+        <div className="main__section">
             <h2 className="main__section-title">Macroeconomics</h2>
             <a href="/" className="main__section-readmore">Read more</a>
-        </section>
+        </div>
 
         <div className="main__macroeconomics">
           <div className="main__macroeconomics-container">
@@ -68,10 +68,10 @@ const IndexPage: React.FC<PageProps> = () => {
           </div>
         </div>
 
-        <section className="main__section">
+        <div className="main__section">
             <h2 className="main__section-title">Stock markets</h2>
             <a href="/" className="main__section-readmore">Read more</a>
-        </section>
+        </div>
 
         {/* <Container fluid={true} className="">
           <Row>

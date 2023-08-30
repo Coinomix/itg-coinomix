@@ -39,7 +39,7 @@ export const CardNews: React.FC<Props> = ({
 
         <div className="cardnews__footer">
           <div className="cardnews__author">
-            <a href="/" className="cardnews__author-link">by Chris Moore</a>
+            <a href="#/" className="cardnews__author-link">by Chris Moore</a>
             <p className="cardnews__author-date">January 2, 2023</p>
             <p className="cardnews__author-date">9:00 AM GMT</p>
           </div>

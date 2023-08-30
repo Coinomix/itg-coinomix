@@ -29,15 +29,15 @@ export const CardNewsTop = () => {
         </div>
         <div className="cardnewstop__footer">
           <div className="cardnewstop__author">
-            <a href="/">
+            <a href="#/">
               <StaticImage src="../../assets/images/header/demo_user.jpg" alt="Demo user author" className="cardnewstop__author-photo" />
             </a>
             <div className="cardnewstop__author-name">
-              <a href="/" className="cardnewstop__author-link">Chris Moore</a>
+              <a href="#/" className="cardnewstop__author-link">Chris Moore</a>
               <span className="cardnewstop__date">Sep 10, 2023</span>
             </div>
           </div>
-          <a href="/">
+          <a href="#/">
             <img className="cardtags__arrowicon" src={arrowIcon} alt="Arrow Icon" />
           </a>
         </div>

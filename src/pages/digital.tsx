@@ -1,14 +1,12 @@
 import * as React from "react";
-import type { HeadFC, PageProps } from "gatsby";
+import type { HeadFC } from "gatsby";
+import { Link } from "gatsby";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import "../assets/styles/scss/index.scss";
 import { CardNews } from "../components/CardNews";
-import { CryptoString } from "../components/CryptoString";
-import { LatestNews } from "../components/LatestNews";
 import { CardNewsTop } from "../components/CardNewsTop";
 import { CardNewsSmall } from "../components/CardNewsSmall";
-import { CardBanner } from "../components/CardBanner";
 import { Devider } from "../components/Devider";
 import { CardNewsType } from "../type/CardNewsType";
 
@@ -18,7 +16,12 @@ const DigitalPage = () => {
       <Header />
 
       <main className="main">
-        <h1 className="main__title">Digital</h1>
+        <div className="main__header">
+          <div className="main__breadcrumbs">
+            <Link to="/" className="main__breadcrumbs-link">&lt; Home</Link>
+          </div>
+          <h1 className="main__title">Digital</h1>
+        </div>
 
         <div className="main__categories">
           <div className="main__categories-container">
@@ -35,17 +38,17 @@ const DigitalPage = () => {
           <div>
             <CardNews type={CardNewsType.top} imgUrl="https://s3-alpha-sig.figma.com/img/a71c/a942/b16b70fba3afc68be6a58b43276dbb2c?Expires=1693785600&Signature=Z3Crb2zXr55J~Y8skL9J1MaAn49LlqMDoRlep1zVyhY2HIFXj3clNt8Ej~ATgLTm9-MIZcAvSt~NHnGpqJyfLvtiS4m41EtG15GIx9Ltmqz59KW1w9A8Zanm2JCi6O191JslIlMpV6lpfYlZMZucYA9b5tb-vlheV2VkIJpKd2rT9rIjKIdHOE3L~Z8n4mFsnDRhf4kz4gbXYkZJCPr~O2LTzYrxAMVTIssWHhnmp32lpBPx7hPInYJo5se3E~upELjXXjnU04LJJOiH62pBOtvdtZ0o3ZTEUk7QzSP-zAE4537P4VKP6tt~hIE8aaVJGc9H9Um63YVNFbl9ZZ~t3g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
           </div>
-          
+
           <div className="main__macroeconomics-container">
             <CardNewsSmall imgUrl="https://s3-alpha-sig.figma.com/img/8d21/8fb2/c5827f333c402a5722bd1c3e6b5fb0f9?Expires=1693785600&Signature=TAYy1IlgxnYuSN7A7HTJa-4PxjxIbZoB7dcnG9JwmZBAMgryuROhqR1YQSeh6syfNT9JkmZWD0Z1epeK24xhGog1DpoZOkBWSm6wW9Be3pGhMFouRkhLd6PDjXyAC2J9cE937P-YGA4guK1Sk6GMkADU0adt-X7MyGvOokQ9p3qW-f6kAGQna~X0nW9bcfKPMSm96-LZEKjg9GytU9IJ3Nab3k5tpz-m53RHJNdxj6JjHkFZFiif1sUicfDzNZAcwE4CZcjija-f68RyN0iMNt8qMMos~-0ceI5FeCAHpo72m7Bhr4c5xWhoDCatbuxHPfysBH93gm1xHv8MbuA1kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"/>
             <CardNewsSmall imgUrl="https://s3-alpha-sig.figma.com/img/9323/13ce/4391552b1fa0b009a57af6bc6d78e8de?Expires=1693785600&Signature=C4UQ1RKW2nr~bTHOZ1JNMWy6n6KZ-tK7zj-q1LZPkSOmh1F7zL85Sdfl0Ssv~toMgK7P3AW1DYxqzGDUOHI7FMnfw5vIEqjCxVM~mqQ9Zd9-0579SeSGZuhszSOzzxdQ5OwMGF02RYiHkBiwq2fe7KwyKgQQgMw1zNSalw91YZRvnAYlLVWvIr2c9~RgDvtb~nRNdByTTrwVmSAVY3RE5~8gLWWOJvCKH1t4C1DScE0qUwDqh5oZQmUnn4qYppCJZyWhze08LM67Bd~OFgIUkNPbRLYCW2DPXqJdKtcZFwbIpPBmwpaI9-SVtblIb0E3Cln7lKx4u3~y4YsbXhgu9w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"/>
           </div>
         </div>
 
-        <section className="main__section">
+        <div className="main__section">
             <h2 className="main__section-title">More of digital</h2>
             <a href="#" className="main__section-readmore">Read more</a>
-        </section>
+        </div>
 
         <CardNewsTop />
 
@@ -57,17 +60,17 @@ const DigitalPage = () => {
           <CardNewsSmall imgUrl="https://s3-alpha-sig.figma.com/img/14a7/9c9b/51308c627efee3fe8348e7261421b20f?Expires=1693785600&Signature=XtnYgBeQp9pkP20U0N-lKIRqEmZm2~ovo5bz842irxUoUO2Z82GAkflpcoXESpzDmij4yBkWwOJe2dmcOY3xRu-0oA7mOO2pF~W~eidDGeOYWu8KUTHyYu1h0~Xg9pjiCah~~iuiCjwFdrH6s9gt99t89KC1OZifReUgvJ8WzsxdYvlSXazNBPDgiyTPihaQtdbeCiEnQMIfDk5gLyg8rjSs5Z20zpEM3cUM5ytWEfDyLyA8Gqt1GhS1y6hjBTLEYq-PlCC4PH1Fywt9cJ89YnCoKul9ApyNV-tqZzXMwQHh-GltkU09FvnSsTICA-Xy3GrL-994IHYMOPPbHvgL5A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
         </div> 
 
-        <section className="main__section">
+        <div className="main__section">
             <h2 className="main__section-title">Must to read</h2>
             <a href="/" className="main__section-readmore">Read more</a>
-        </section>
+        </div>
 
         <div className="main__container-latestnews">
           <div className="main__macroeconomics-container">
             <CardNewsSmall imgUrl="https://s3-alpha-sig.figma.com/img/8d21/8fb2/c5827f333c402a5722bd1c3e6b5fb0f9?Expires=1693785600&Signature=TAYy1IlgxnYuSN7A7HTJa-4PxjxIbZoB7dcnG9JwmZBAMgryuROhqR1YQSeh6syfNT9JkmZWD0Z1epeK24xhGog1DpoZOkBWSm6wW9Be3pGhMFouRkhLd6PDjXyAC2J9cE937P-YGA4guK1Sk6GMkADU0adt-X7MyGvOokQ9p3qW-f6kAGQna~X0nW9bcfKPMSm96-LZEKjg9GytU9IJ3Nab3k5tpz-m53RHJNdxj6JjHkFZFiif1sUicfDzNZAcwE4CZcjija-f68RyN0iMNt8qMMos~-0ceI5FeCAHpo72m7Bhr4c5xWhoDCatbuxHPfysBH93gm1xHv8MbuA1kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"/>
             <CardNewsSmall imgUrl="https://s3-alpha-sig.figma.com/img/9323/13ce/4391552b1fa0b009a57af6bc6d78e8de?Expires=1693785600&Signature=C4UQ1RKW2nr~bTHOZ1JNMWy6n6KZ-tK7zj-q1LZPkSOmh1F7zL85Sdfl0Ssv~toMgK7P3AW1DYxqzGDUOHI7FMnfw5vIEqjCxVM~mqQ9Zd9-0579SeSGZuhszSOzzxdQ5OwMGF02RYiHkBiwq2fe7KwyKgQQgMw1zNSalw91YZRvnAYlLVWvIr2c9~RgDvtb~nRNdByTTrwVmSAVY3RE5~8gLWWOJvCKH1t4C1DScE0qUwDqh5oZQmUnn4qYppCJZyWhze08LM67Bd~OFgIUkNPbRLYCW2DPXqJdKtcZFwbIpPBmwpaI9-SVtblIb0E3Cln7lKx4u3~y4YsbXhgu9w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"/>
           </div>
-          
+
           <div>
             <CardNews type={CardNewsType.top} imgUrl="https://s3-alpha-sig.figma.com/img/a71c/a942/b16b70fba3afc68be6a58b43276dbb2c?Expires=1693785600&Signature=Z3Crb2zXr55J~Y8skL9J1MaAn49LlqMDoRlep1zVyhY2HIFXj3clNt8Ej~ATgLTm9-MIZcAvSt~NHnGpqJyfLvtiS4m41EtG15GIx9Ltmqz59KW1w9A8Zanm2JCi6O191JslIlMpV6lpfYlZMZucYA9b5tb-vlheV2VkIJpKd2rT9rIjKIdHOE3L~Z8n4mFsnDRhf4kz4gbXYkZJCPr~O2LTzYrxAMVTIssWHhnmp32lpBPx7hPInYJo5se3E~upELjXXjnU04LJJOiH62pBOtvdtZ0o3ZTEUk7QzSP-zAE4537P4VKP6tt~hIE8aaVJGc9H9Um63YVNFbl9ZZ~t3g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
           </div>
