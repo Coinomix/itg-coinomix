@@ -4,9 +4,9 @@ export enum CardNewsType {
 };
 
 export enum ButtonType {
-  signin = "custom-button__signin",
-  signup = "custom-button__signup",
-  subscribe_blue = "custom-button__subscribe_blue",
-  subscribe_green = "custom-button__subscribe_green",
-  subscribe_purple = "custom-button__subscribe_purple",
+  signin = "custombutton__signin",
+  signup = "custombutton__signup",
+  subscribe_blue = "custombutton__subscribe-blue",
+  subscribe_green = "custombutton__subscribe-green",
+  subscribe_purple = "custombutton__subscribe-purple",
 };

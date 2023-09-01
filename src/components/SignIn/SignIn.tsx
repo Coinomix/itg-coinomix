@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import demoUserImage from "../../assets/images/header/demo_user.jpg";
 import { Menu, MenuItem, Avatar, Divider, ListItemIcon, Button, Stack, Container, createTheme, ThemeProvider } from "@mui/material";
 import { Link } from "gatsby";
+import { CustomButton } from "../CustomButton";
+import { ButtonType } from "../../types/enums";
 
 const theme = createTheme({
   palette: {
@@ -50,10 +52,11 @@ export const SignIn = () => {
       >
         <Container>
           <Stack spacing={2} direction="row">
-            <Button size="small" variant="contained">Sing up</Button>
-            <Button size="small" variant="outlined">Sing in</Button>
+            <CustomButton text="Sign in" type={ButtonType.signin} />
+            <CustomButton text="Sign up" type={ButtonType.signup} />
           </Stack>
         </Container>
+        <Divider />
         <Divider />
         <MenuItem onClick={handleClose}>
           Profile

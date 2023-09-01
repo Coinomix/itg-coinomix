@@ -12,7 +12,7 @@ export const Footer = () => {
     <div className="footer">
       <div className="footer__container">
         <Link to="/">
-          <StaticImage className="coinimix-logo" alt="Coinimix logo" src="../../assets/images/coinimix-logo.svg" />
+          <img src={logoCoinomix} alt="Coinimix logo" className="header__logo" />
         </Link>
         <div className="footer__social">
           <a href="https://itg-investments.com"><img className="footer__icons" src={iconlogoCoinomix} alt="ITG logo Icon" /></a>

@@ -16,7 +16,8 @@ export const Header = () => {
       <SidebarLeft />
       
       <Link to="/">
-        <StaticImage className="coinimix-logo" alt="Coinimix logo" src="../../assets/images/coinimix-logo.svg" />
+        <img src={logoCoinomix} alt="Coinimix logo" className="header__logo" />
+        {/* <StaticImage className="coinimix-logo" alt="Coinimix logo" src="../../assets/images/coinimix-logo.svg" /> */}
       </Link>
 
       {/* {isDemoUser ? (

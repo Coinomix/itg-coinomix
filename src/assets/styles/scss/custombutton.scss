@@ -1,12 +1,49 @@
 .custombutton {
   display: flex;
-  width: 200px;
-  height: 52px;
-  padding: 4px;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
   border-radius: 8px;
-  background: linear-gradient(90deg, #94CBFD -0.6%, #8CF8E5 101.11%);
+
+  &__signin {
+    border: 0;
+    background: #FAFAFA;
+
+    &:hover {
+      background: #DEDEDE;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+    }
+  }
+
+  &__signup {
+    border: 1px solid #FAFAFA;
+    background: transparent;
+    color: #FAFAFA;
+
+    &:hover {
+      background: #FAFAFA;
+      color: #0F0F0F;
+      cursor: pointer;
+    }
+  }
+
+  &__subscribe-blue {
+    border: 0;
+    background: linear-gradient(90deg, #94CBFD -0.6%, #8CF8E5 101.11%);
+    color: #0F0F0F;
+
+    &:hover {
+      box-shadow: 0px 0px 30px 0px rgba(144, 225, 241, 0.25);
+      cursor: pointer;
+      color: #2C2C2C;
+    }
+  }
 }

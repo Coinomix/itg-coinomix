@@ -11,7 +11,6 @@ import ListItemText from '@mui/material/ListItemText';
 import { Collapse, IconButton, Input, InputAdornment, ThemeProvider, createTheme } from '@mui/material';
 import { ExpandLess, ExpandMore } from '@mui/icons-material';
 import { Link as GatsbyLink } from 'gatsby';
-import { Link as MuiLink } from '@mui/material';
 
 const theme = createTheme({
   palette: {
@@ -67,13 +66,13 @@ export default function SidebarLeft() {
           </ListItem>
         ))}
         <ListItemButton onClick={handleClick}>
-          <ListItemText primary="Inbox" />
+          <ListItemText primary="Test menu" />
           {open ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
           <ListItemButton sx={{ pl: 4 }}>
-            <ListItemText primary="Starred" />
+            <ListItemText primary="Submenu" />
           </ListItemButton>
         </List>
       </Collapse>
