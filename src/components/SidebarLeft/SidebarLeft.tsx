@@ -1,8 +1,6 @@
 import * as React from 'react';
-import { Link } from "gatsby";
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
@@ -82,6 +80,7 @@ export default function SidebarLeft() {
         {[
           {title: 'About us', url: 'about'},
           {title: 'Article Example', url: 'article'},
+          {title: 'Latest News', url: 'latest-news'},
         ].map((object) => (
           <ListItem key={object.url} disablePadding>
             <ListItemButton>

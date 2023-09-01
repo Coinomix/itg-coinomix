@@ -31,7 +31,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
         <CryptoString />
 
-        <CardBanner />
+        <CardBanner imgUrl="https://s3-alpha-sig.figma.com/img/d64d/b394/0e2297d578c318fe43e421305ae40a5d?Expires=1694390400&Signature=cYcqHjFTsvKnRJ~SSb8ILj4cQIq3g4ILYXN2AJSs-u5rig0g6zfuwhClnaROQ1-7QDLhxPcV7h8yHX9mxiSy0gmYm3ahE1YTwX~YqcVCzzM6HuaX0vWrNXINS01lhLwcLjp8MHEVEY~yLeHmaij7sDknHeFvqG7TiEOwU4gtLQ3GFtj1bUhfWFYazhIAmDsBCbp7iqA1Yn3K~1tcw0-WNpMoRGjdf3hq-JmTIWpPzrXb6bhYLcUhtskIN40phheL3xNGf2j1h16BLT0gmYGWR53vETNsCOUPfxqO2h1nqJ3Fil9bm21DOREOqkx0Rq0TX6a5LLYHqrfgLCQBIMX4sQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
 
         <div className="main__section">
             <h2 className="main__section-title">Cryptocurrency</h2>
