@@ -8,7 +8,7 @@ import { CardNews } from "../components/CardNews";
 import { CardNewsTop } from "../components/CardNewsTop";
 import { CardNewsSmall } from "../components/CardNewsSmall";
 import { Devider } from "../components/Devider";
-import { CardNewsType } from "../type/CardNewsType";
+import { CardNewsType } from "../types/enums";
 import { Grid } from "@mui/material";
 
 const DirectoryPage = () => {

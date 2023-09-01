@@ -10,16 +10,17 @@ import { CardNewsTop } from "../components/CardNewsTop";
 import { CardNewsSmall } from "../components/CardNewsSmall";
 import { CardBanner } from "../components/CardBanner";
 import { Devider } from "../components/Devider";
-import { CardNewsType } from "../type/CardNewsType";
+import { CardNewsType } from "../types/enums";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <>
       <Header />
 
-      <Devider />
-
       <main className="main">
+        
+        <Devider />
+        
         <div className="main__container-latestnews">
           <div>
             <CardNews type={CardNewsType.top} imgUrl="https://s3-alpha-sig.figma.com/img/a71c/a942/b16b70fba3afc68be6a58b43276dbb2c?Expires=1693785600&Signature=Z3Crb2zXr55J~Y8skL9J1MaAn49LlqMDoRlep1zVyhY2HIFXj3clNt8Ej~ATgLTm9-MIZcAvSt~NHnGpqJyfLvtiS4m41EtG15GIx9Ltmqz59KW1w9A8Zanm2JCi6O191JslIlMpV6lpfYlZMZucYA9b5tb-vlheV2VkIJpKd2rT9rIjKIdHOE3L~Z8n4mFsnDRhf4kz4gbXYkZJCPr~O2LTzYrxAMVTIssWHhnmp32lpBPx7hPInYJo5se3E~upELjXXjnU04LJJOiH62pBOtvdtZ0o3ZTEUk7QzSP-zAE4537P4VKP6tt~hIE8aaVJGc9H9Um63YVNFbl9ZZ~t3g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />

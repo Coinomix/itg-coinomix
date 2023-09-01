@@ -27,6 +27,10 @@ export default function SidebarLeft() {
     setOpen(!open);
   };
 
+  const handleClickUrl = (url: string) => {
+    <GatsbyLink to={`/${url}`} />
+  };
+
   const toggleDrawer = (open: boolean) =>
     (event: React.KeyboardEvent | React.MouseEvent) => {
       if (
@@ -55,11 +59,11 @@ export default function SidebarLeft() {
           {title: 'Directory', url: 'directory'}
         ].map((obj) => (
           <ListItem key={obj.url} disablePadding>
-              <ListItemButton>
-              <GatsbyLink to={`/${obj.url}`} as={MuiLink}>
+            <ListItemButton>
+              <GatsbyLink to={`/${obj.url}`}>
                 <ListItemText primary={obj.title} />
               </GatsbyLink>
-              </ListItemButton>
+            </ListItemButton>
           </ListItem>
         ))}
         <ListItemButton onClick={handleClick}>
@@ -76,10 +80,15 @@ export default function SidebarLeft() {
       </List>
       <Divider />
       <List>
-        {['About us', 'Contacts'].map((text) => (
-          <ListItem key={text} disablePadding>
+        {[
+          {title: 'About us', url: 'about'},
+          {title: 'Article Example', url: 'article'},
+        ].map((object) => (
+          <ListItem key={object.url} disablePadding>
             <ListItemButton>
-              <ListItemText primary={text} />
+              <GatsbyLink to={`/${object.url}`}>
+                <ListItemText primary={object.title} />
+              </GatsbyLink>
             </ListItemButton>
           </ListItem>
         ))}

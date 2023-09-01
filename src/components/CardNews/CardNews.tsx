@@ -4,7 +4,7 @@ import { CardTags } from "../CardTags";
 // import favoriteIcon from "../../assets/images/favorite.svg";
 // import commentIcon from "../../assets/images/comment.svg";
 // import regroupIcon from "../../assets/images/regroup.svg";
-import { CardNewsType } from "../../type/CardNewsType";
+import { CardNewsType } from "../../types/enums";
 
 interface Props {
   imgUrl?: string;

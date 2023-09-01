@@ -1,0 +1,12 @@
+.custombutton {
+  display: flex;
+  width: 200px;
+  height: 52px;
+  padding: 4px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #94CBFD -0.6%, #8CF8E5 101.11%);
+}
