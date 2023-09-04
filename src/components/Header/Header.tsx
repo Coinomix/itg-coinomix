@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import "./Header.scss";
 import logoCoinomix from "../../assets/images/coinimix-logo.svg";
 import demoUserImage from "../../assets/images/header/demo_user.jpg";
 import { Link } from "gatsby";

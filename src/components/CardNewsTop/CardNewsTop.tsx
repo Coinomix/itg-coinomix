@@ -1,4 +1,5 @@
 import React from "react";
+import "./CardNewsTop.scss";
 import demoUserImage from "../../assets/images/header/demo_user.jpg";
 import arrowIcon from "../../assets/images/arrow_icon.svg";
 import { CardTags } from "../CardTags";

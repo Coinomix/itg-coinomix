@@ -1,4 +1,5 @@
 import React from "react";
+import "./CardTags.scss"
 import arrowIcon from "../../assets/images/arrow_icon.svg";
 
 interface Props {

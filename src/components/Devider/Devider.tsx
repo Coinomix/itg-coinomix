@@ -1,11 +1,12 @@
 import React from "react";
 
-export const Devider = () => {
-  const deviderStyle = {
-    margin: "20px 0"
-  };
+interface Props {
+  marginTop?: string;
+}
+
+export const Devider: React.FC<Props> = ({marginTop = "20px" }) => {
 
   return (
-    <div style={deviderStyle}></div>
+    <div style={{ marginTop }}></div>
   );
 };

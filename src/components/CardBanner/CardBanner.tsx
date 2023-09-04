@@ -1,4 +1,5 @@
 import React from "react";
+import "./CardBanner.scss";
 
 interface Props {
   imgUrl?: string;

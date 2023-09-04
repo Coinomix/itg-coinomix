@@ -1,0 +1,27 @@
+@import "./mixins";
+
+.latest-news-page {
+  margin: 0 120px;
+  padding-top: 104px;
+
+  @include onTablet {
+    margin: 0 20px;
+  }
+
+  @include onPhone {
+    margin: 0 10px;
+  }
+
+  &__container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  &__sidebar {
+    @include onTablet {
+      display: none;
+    }
+  }
+}

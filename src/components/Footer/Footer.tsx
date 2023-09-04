@@ -1,4 +1,5 @@
 import React from "react";
+import "./Footer.scss";
 import logoCoinomix from "../../assets/images/coinimix-logo.svg";
 import iconlogoCoinomix from "../../assets/images/footer/itg_logo.svg";
 import iconTelegram from "../../assets/images/footer/telegram.svg";

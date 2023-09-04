@@ -1,6 +1,8 @@
 import React from "react";
-import { ButtonType } from "../../types/enums";
 import classNames from "classnames";
+import "./CustomButton.scss";
+import { ButtonType } from "../../types/enums";
+
 
 interface Props {
   type?: ButtonType;

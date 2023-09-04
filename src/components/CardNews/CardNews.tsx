@@ -1,10 +1,12 @@
 import React from "react";
+import "./CardNews.scss";
 import classNames from "classnames";
 import { CardTags } from "../CardTags";
 // import favoriteIcon from "../../assets/images/favorite.svg";
 // import commentIcon from "../../assets/images/comment.svg";
 // import regroupIcon from "../../assets/images/regroup.svg";
 import { CardNewsType } from "../../types/enums";
+import { Link } from "gatsby";
 
 interface Props {
   imgUrl?: string;
@@ -24,16 +26,16 @@ export const CardNews: React.FC<Props> = ({
         />
       )}
       <div className="cardnews__content">
-        <div className="cardnews__head">
+        <div className="cardnews__header">
           <CardTags />
 
           <div className={classNames('cardnews__title', {
           'cardnews__title-top': type === CardNewsType.top,
         })}> 
 
-            <a href="/" className="cardnews__title-link">
+            <Link to="/article" className="cardnews__title-link">
               Bitcoin offshore and the end of mining: how the world of cryptocurrencies is changing in 2023
-            </a>
+            </Link>
           </div>
         </div>  
 

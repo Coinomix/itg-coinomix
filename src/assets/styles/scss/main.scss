@@ -1,9 +1,15 @@
+@import "../scss/mixins";
+
 .main {
   margin: 0 40px;
   padding-top: 104px;
 
-  @media (max-width: 1060px) {
+  @include onTablet {
     margin: 0 20px;
+  }
+
+  @include onPhone {
+    margin: 0 10px;
   }
 
   &__header {
@@ -82,9 +88,13 @@
     flex-direction: row;
     gap: 20px;
 
-    @media (max-width: 1060px) {
+    @include onTablet {
       flex-wrap: wrap;
     }
+
+    // @media (max-width: 1060px) {
+    //   flex-wrap: wrap;
+    // }
   }
 
   &__section {  

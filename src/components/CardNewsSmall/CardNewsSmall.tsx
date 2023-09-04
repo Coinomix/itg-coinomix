@@ -1,4 +1,5 @@
 import React from "react";
+import "./CardNewsSmall.scss";
 import { CardTags } from "../CardTags";
 
 interface Props {
@@ -22,7 +23,7 @@ export const CardNewsSmall: React.FC<Props> = ({
         </div>
 
         <div className="cardnews-small__title">
-          <a href="/" className="cardnews-small__title-link">
+          <a href="#/" className="cardnews-small__title-link">
             Bitcoin offshore and the end of mining: how the world of cryptocurrencies is changing in 2023
           </a>
         </div>

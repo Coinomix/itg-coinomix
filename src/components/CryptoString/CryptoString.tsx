@@ -1,4 +1,5 @@
 import React from "react";
+import "./CryptoString.scss"
 
 export const CryptoString = () => {
   return (
