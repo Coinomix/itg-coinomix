@@ -18,7 +18,7 @@ export const CardNewsTop = () => {
         </div>
       </div>
       <div className="cardnewstop__right">
-        <div className="cardnewstop__head">
+        <div className="cardnewstop__header">
           <a href="#/">
             <h3 className="cardnewstop__title">
               Bitcoin offshore and the end of mining: how the world of cryptocurrencies is changing in 2023

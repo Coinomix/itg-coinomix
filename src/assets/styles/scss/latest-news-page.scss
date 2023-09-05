@@ -5,7 +5,7 @@
   padding-top: 104px;
 
   @include onTablet {
-    margin: 0 20px;
+    margin: 0 40px;
   }
 
   @include onPhone {
@@ -13,15 +13,76 @@
   }
 
   &__container {
-    margin-top: 40px;
     display: flex;
     flex-direction: row;
     gap: 40px;
+    margin-top: 40px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1040px;
+  }
+
+  &__filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__tabs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  &__tab {
+    color: #9D9D9D;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 138%; /* 27.6px */
+
+    &:hover {
+      color:#FAFAFA;
+    }
+
+    &-active {
+      color: #FAFAFA;
+      padding: 0 8px;
+      border-bottom: 1px solid #FAFAFA;
+    }
   }
 
   &__sidebar {
+    width: 600px;
+
     @include onTablet {
       display: none;
+    }
+  }
+
+  &__pages {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    &-link {
+      color: #9D9D9D;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+
+      &:hover {
+        color:#FAFAFA;
+      }
     }
   }
 }
