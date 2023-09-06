@@ -15,15 +15,14 @@ const ArticlePage = () => {
     <>
       <Header />
 
-      <main className="main">
-        <article className="article">
-          <PageTitle 
+      <PageTitle 
             title="Bitcoin offshore and the end of mining: how the world of cryptocurrencies is changing in 2023"
             breadcrumbsTitle="Digital"
             breadcrumbsUrl="digital"
-          />
+      />
 
-          <Devider />
+      <main className="main">
+        <article className="article">
 
           <CardBanner height="618px" imgUrl={imgBitcoin} />
 

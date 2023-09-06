@@ -13,14 +13,12 @@ const AboutPage = () => {
     <>
       <Header />
 
-      <main className="main">
-        <PageTitle 
+      <PageTitle 
             title="About us"
             breadcrumbsTitle="Home"
-        />
+      />
 
-          <Devider />
-
+      <main className="main">
           <CardBanner height="406px" imgUrl={imgLaptopOne} />
 
           <div className="article__content">

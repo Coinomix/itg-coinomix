@@ -1,0 +1,31 @@
+.pagetitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  margin: 0 40px;
+  padding-top: 104px;
+
+  &__breadcrumbs {
+    position: absolute;
+
+    &-link {
+      color: #FAFAFA;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      text-decoration: none;
+    }
+  }
+
+  &__title {
+    max-width: 1126px;
+    text-align: center;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0 auto;
+  }
+}

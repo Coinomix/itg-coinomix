@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import "./PageTitle.scss"
 
 
 interface Props {
@@ -14,11 +15,11 @@ export const PageTitle: React.FC <Props> = ({
   breadcrumbsUrl = '',
 }) => {
   return (
-    <div className="main__header">
-      <div className="main__breadcrumbs">
-        <Link to={`/${breadcrumbsUrl}`} className="main__breadcrumbs-link">&lt; {breadcrumbsTitle}</Link>
+    <div className="pagetitle">
+      <div className="pagetitle__breadcrumbs">
+        <Link to={`/${breadcrumbsUrl}`} className="pagetitle__breadcrumbs-link">&lt; {breadcrumbsTitle}</Link>
       </div>
-      <h1 className="main__title">{title}</h1>
+      <h1 className="pagetitle__title">{title}</h1>
   </div>
   );
 };

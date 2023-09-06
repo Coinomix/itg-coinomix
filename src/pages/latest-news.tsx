@@ -8,18 +8,19 @@ import { PageTitle } from "../components/PageTitle";
 import { CardLatestNews } from "../components/CardLatestNews";
 import { BlockRecommendedFollow } from "../components/BlockRecommendedFollow";
 import { BlockJoinUs } from "../components/BlockJoinUs";
+import { BlockPageLinks } from "../components/BlockPageLinks";
 
 const LatestNewsPage = () => {
   return (
     <>
       <Header />
 
-      <main className="latest-news-page">
-        <PageTitle
+      <PageTitle
           title="Latest news"
           breadcrumbsTitle=""
       />
 
+      <main className="latest-news-page">
         <div className="latest-news-page__container">
           <div className="latest-news-page__content">
             <div className="latest-news-page__filters">
@@ -42,52 +43,14 @@ const LatestNewsPage = () => {
             <CardLatestNews />
           </div>
           <div className="latest-news-page__sidebar">
-            {/* <LatestNews />
-
-            <Devider /> */}
 
             <BlockRecommendedFollow />
 
-            <Devider height="40px" />
-
             <BlockJoinUs />
 
-            <Devider height="40px" />
-
-            <div className="latest-news-page__pages">
-              <Link to="/digital" className="latest-news-page__pages-link">
-                Digital
-              </Link>
-              <Link to="/analytics" className="latest-news-page__pages-link">
-                Analytics
-              </Link>
-              <Link to="/exchange" className="latest-news-page__pages-link">
-                Exchange
-              </Link>
-              <Link to="/directory" className="latest-news-page__pages-link">
-                Directory
-              </Link>
-              <Link to="#" className="latest-news-page__pages-link">
-                Blogs
-              </Link>
-              <Link to="#" className="latest-news-page__pages-link">
-                Tags
-              </Link>
-              <Link to="#" className="latest-news-page__pages-link">
-                Privacy Policy
-              </Link>
-              <Link to="#" className="latest-news-page__pages-link">
-                Terms
-              </Link>
-              <Link to="#" className="latest-news-page__pages-link">
-                Cookies
-              </Link>
-            </div>
+            <BlockPageLinks />
           </div>
         </div> 
-
-        <Devider height="140px" />
-
       </main>
     </>
   );
@@ -95,4 +58,4 @@ const LatestNewsPage = () => {
 
 export default LatestNewsPage;
 
-export const Head: HeadFC = () => <title>Latest News Page</title>
+export const Head: HeadFC = () => <title>Latest News Page | Coinomix</title>

@@ -81,6 +81,7 @@ export default function SidebarLeft() {
           {title: 'About us', url: 'about'},
           {title: 'Article Example', url: 'article'},
           {title: 'Latest News', url: 'latest-news'},
+          {title: 'Blogs', url: 'blogs'},
         ].map((object) => (
           <ListItem key={object.url} disablePadding>
             <ListItemButton>

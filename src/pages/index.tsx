@@ -5,7 +5,7 @@ import { Header } from "../components/Header";
 import "../assets/styles/scss/index.scss";
 import { CardNews } from "../components/CardNews";
 import { CryptoString } from "../components/CryptoString";
-import { LatestNews } from "../components/LatestNews";
+import { BlockLatestNews } from "../components/BlockLatestNews";
 import { CardNewsTop } from "../components/CardNewsTop";
 import { CardNewsSmall } from "../components/CardNewsSmall";
 import { CardBanner } from "../components/CardBanner";
@@ -41,7 +41,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <CardNews type={CardNewsType.top} imgUrl={imgBitcoin} />
           </div>
 
-          <LatestNews />
+          <BlockLatestNews />
         </div>
 
         <Devider />
@@ -141,4 +141,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head: HeadFC = () => <title>Home Page | Coinomix</title>

@@ -1,9 +1,9 @@
 import React from "react";
-import "./LatestNews.scss";
-import arrowIcon from "../../assets/images/arrow_icon.svg";
 import { Link } from "gatsby";
+import "./BlockLatestNews.scss";
+import arrowIcon from "../../assets/images/arrow_icon.svg";
 
-export const LatestNews = () => {
+export const BlockLatestNews = () => {
   return (
     <div className="latestnews">
       <div className="latestnews__header">
