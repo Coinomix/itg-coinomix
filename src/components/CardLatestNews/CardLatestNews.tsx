@@ -1,10 +1,7 @@
 import React from "react";
-import "./CardLatestNews.scss";
-import { CardTags } from "../CardTags";
-import favoriteIcon from "../../assets/images/favorite.svg";
-import commentIcon from "../../assets/images/comment.svg";
-import regroupIcon from "../../assets/images/regroup.svg";
 import { Link } from "gatsby";
+import "./CardLatestNews.scss";
+import imgBitcoin  from "../../assets/images/demo/bitcoin.jpg";
 
 export const CardLatestNews = () => {
   return (
@@ -25,7 +22,7 @@ export const CardLatestNews = () => {
         <div className="card-latest-news__body">
           <div className="card-latest-news__body-image">
             <Link to="/article">
-              <img className="card-latest-news__image" src="https://s3-alpha-sig.figma.com/img/a71c/a942/b16b70fba3afc68be6a58b43276dbb2c?Expires=1694995200&Signature=UuRhjKVwZaAg4hKMWzGgDm3s1UrhAxLgamh32THZ8z3ld2VYq~MH9ZV9HOsu5Y~eHms175dr0qQfRRpKJE5CqNXKIQqkZ1Gnqs5OUwOF1KTpBtiQgg-k558TOLrCBTvpFuhlw8AVVZXgExuazd4qrsIlH1ZQz3d6N40HS-Tg-lM2bv0sagSCqyItX5Eusc3ZkrXKGw9Ff4siK9JFtJRr35WjXyxgMgPRis4H7TgvwvRnihooFmMW8a9lBO14aYZFDrLLdttEGCqloXvZOKqOigEuUR~iUmMJ70t6iz1pQVyY~eIojZSQtQBlfRTIzvQfIFMuO~3mkymarIOsMxY3xg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
+              <img className="card-latest-news__image" src={imgBitcoin} />
             </Link>
           </div>
             <div className="card-latest-news__body-title">

@@ -1,16 +1,16 @@
 import React from "react";
 import "./CardNewsTop.scss";
-import demoUserImage from "../../assets/images/header/demo_user.jpg";
-import arrowIcon from "../../assets/images/arrow_icon.svg";
 import { CardTags } from "../CardTags";
 import { StaticImage } from "gatsby-plugin-image";
+import arrowIcon from "../../assets/images/arrow_icon.svg";
+import imgCity from "../../assets/images/demo/city.png";
 
 export const CardNewsTop = () => {
   return (
     <div className="cardnewstop">
       <div className="cardnewstop__left">
           <img 
-            src="https://s3-alpha-sig.figma.com/img/e348/15ec/6d73fc0b2b6ccf273983b85521c605fa?Expires=1694390400&Signature=NFjhrToGeyS38D8~VqOEdayxnOt4QoTATnu~ehWynHM-mul1deuWlRQIrx1-ufNPjsGT8OmrTaOYSqkndIQLxEbYHTUEsw2nXLQp3mhNXWXVdEMaLpP2mw7CFqx1uW9WSTvehaBBf7g-ayEar-M~8z-P0utrz0yQGwIWXjmx34jbm3XSWM8pDad7EISnU5kE-25aEx~igIp5wSUPrkSlLUXSoCuKzZM0lEqStejSFevStE7XBJ3Ybq9WbhaVqo4l4i6vyCNIUgCZq7nwY0JG7JdhWFtgOvkl6QAvMhmPGF8I2ksFkC-UGT-bWokEUVcSjPAXaXUWwgmsLPnArkJ0SA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            src={imgCity}
             className="cardnewstop__image"
           />
         <div className="cardnewstop__tags">
