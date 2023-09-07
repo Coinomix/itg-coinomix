@@ -1,8 +1,14 @@
+@import "../../assets/styles/scss/mixins";
+
 .latestnews {
   padding: 22px 10px 22px 0;
   border-radius: 22px;
   border: 2px solid #2c2c2c;
   background: #0f0f0f;
+
+  @include onPhone {
+    padding: 18px 10px 18px 0;
+  }
 
   &__header {
     display: flex;
@@ -15,10 +21,11 @@
     padding: 0 32px;
     margin-bottom: 22px;
     box-sizing: border-box;
-  }
 
-  &__item-link {
-    text-decoration: none;
+    @include onPhone {
+      padding: 0 8px 0 18px;
+      margin-bottom: 14px;
+    }
   }
 
   &__title {
@@ -27,11 +34,20 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+
+    @include onPhone {
+      font-size: 24px;
+    }
   }
 
   &__arrowicon {
     width: 32px;
     height: 32px;
+
+    @include onPhone {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &__container {
@@ -40,16 +56,19 @@
     align-items: flex-start;
     gap: 22px;
     padding: 0 32px;
-
     overflow: auto;
     max-height: 455px;
 
+    @include onPhone {
+      padding: 0 18px;
+    }
+
     &::-webkit-scrollbar {
-      width: 6px; /* Ширина скроллбара */
+      width: 4px; /* Ширина скроллбара */
 
       &-thumb {
         background-color: #2c2c2c; /* Цвет ползунка */
-        border-radius: 5px;
+        border-radius: 4px;
   
         &:hover {
           background-color: #888;
@@ -74,26 +93,38 @@
     align-self: flex-start;
     gap: 14px;
 
+    &-link {
+      text-decoration: none;
+    }
+
     &-title {
       color: #fafafa;
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
+
+      @include onPhone {
+        font-size: 18px;
+      }
     }
 
     &-description {
-      color: #888;
+      color: #9D9D9D;
       font-size: 16px;
       font-style: normal;
       font-weight: 500;
       line-height: normal;
+
+      @include onPhone {
+        font-size: 14px;
+      }
     }
 
     &-hr {
       width: 100%;
       height: 1px;
-      border-color: #2c2c2c;
+      background: #2c2c2c;
     }
   }
 }

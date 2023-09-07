@@ -4,11 +4,11 @@
   margin: 104px 40px;
 
   @include onTablet {
-    margin: 0 20px;
+    margin: 104px 20px;
   }
 
   @include onPhone {
-    margin: 0 10px;
+    margin: 64px 12px;
   }
 
   &__header {
@@ -90,10 +90,6 @@
     @include onTablet {
       flex-wrap: wrap;
     }
-
-    // @media (max-width: 1060px) {
-    //   flex-wrap: wrap;
-    // }
   }
 
   &__section {  
@@ -102,8 +98,11 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 128px;
-    margin-bottom: 80px;
+    margin: 120px 0 80px;
+
+    @include onPhone {
+      margin: 84px 0 44px;
+    }
     
     &-title {
       position: relative;
@@ -112,7 +111,12 @@
       font-style: normal;
       font-weight: 600;
       line-height: normal;
-      padding-left: 20px;
+      padding-left: 16px;
+
+      @include onPhone {
+        font-size: 28px;
+        padding-left: 8px;
+      }
 
       &::before {
         content: "";
@@ -123,6 +127,11 @@
         top: 50%;
         left: - 1px;
         transform: translateY(-50%);
+
+        @include onPhone {
+          width: 2px;
+          height: 21px;
+        }
       }
     }
 
@@ -135,6 +144,10 @@
       line-height: normal;
       text-decoration: none;
 
+      @include onPhone {
+        font-size: 14px;
+      }
+
       &:after {
         content: "";
         position: absolute;
@@ -145,6 +158,10 @@
         bottom: -4px;
         right: 0;
         transition: width 0.3s ease-out;
+
+        @include onPhone {
+          display: none;
+        }
       }
 
       &:hover {

@@ -1,10 +1,16 @@
+@import "../../assets/styles/scss/mixins";
+
 .cardnews {
   position: relative;
   overflow: hidden;
-  height: 480px;
+  height: 564px;
   border-radius: 22px;
   border: 2px solid #2C2C2C;
   background: linear-gradient(91deg, #6F55B4 0%, #DB45D1 100%);
+
+  @include onPhone {
+    height: 384px;
+  }
 
   &__image {
     position: absolute;
@@ -27,6 +33,10 @@
     height: 100%;
     padding: 32px;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.74) 0%, rgba(0, 0, 0, 0.00) 100%);
+
+    @include onPhone {
+      padding: 18px;
+    }
   }
 
   &__header {
@@ -40,8 +50,12 @@
   &__title {
     width: 50%;
 
+    @include onPhone {
+      width: 100%;
+    }
+
     &-top {
-      width: 70%;
+      width: 100%;
     }
 
     &-link {
@@ -51,6 +65,10 @@
       font-weight: 700;
       line-height: normal;
       text-decoration: none;
+
+      @include onPhone {
+        font-size: 24px;
+      }
     }
   }
 
@@ -64,22 +82,20 @@
     display: flex;
     align-items: center;
     gap: 32px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 
-    &-link {
-      color: #FAFAFA;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-      text-decoration: none;
+    @include onPhone {
+      justify-content: space-between;
+      gap: 0;
+      font-size: 12px;
+      width: 100%;
     }
 
-    &-date {
-      color: #FAFAFA;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
+    &-link {
+      text-decoration: none;
     }
   }
 

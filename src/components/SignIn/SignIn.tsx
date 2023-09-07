@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "gatsby";
 import demoUserImage from "../../assets/images/header/demo_user.jpg";
 import { Menu, MenuItem, Avatar, Divider, ListItemIcon, Button, Stack, Container, createTheme, ThemeProvider } from "@mui/material";
-import { Link } from "gatsby";
 import { CustomButton } from "../CustomButton";
 import { ButtonType } from "../../types/enums";
 
@@ -11,12 +11,13 @@ const theme = createTheme({
   },
 });
 
-export const SignIn = () => { 
+export const SignIn = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
