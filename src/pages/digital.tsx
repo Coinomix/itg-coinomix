@@ -3,6 +3,7 @@ import type { HeadFC } from "gatsby";
 import { Link } from "gatsby";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import { PageTitle } from "../components/PageTitle";
 import "../assets/styles/scss/index.scss";
 import { CardNews } from "../components/CardNews";
 import { CardNewsTop } from "../components/CardNewsTop";
@@ -23,19 +24,18 @@ import imgGpaphTwo from "../assets/images/demo/graph_2.jpg";
 import imgEthereum from "../assets/images/demo/ethereum.png";
 import imgDemoOne from "../assets/images/demo/demo_1.jpg";
 
+
 const DigitalPage = () => {
   return (
     <>
       <Header />
 
-      <main className="main">
-        <div className="main__header">
-          <div className="main__breadcrumbs">
-            <Link to="/" className="main__breadcrumbs-link">&lt; Home</Link>
-          </div>
-          <h1 className="main__title">Digital</h1>
-        </div>
+      <PageTitle 
+            title="Digital"
+            breadcrumbsTitle="Home"
+      />
 
+      <main className="main">
         <div className="main__categories">
           <div className="main__categories-container">
             <a href="#/" className="main__categories-link main__categories-active">Crypto</a>

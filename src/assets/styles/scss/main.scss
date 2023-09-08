@@ -1,44 +1,10 @@
 @import "../scss/mixins";
 
 .main {
-  margin: 104px 40px;
-
-  @include onTablet {
-    margin: 104px 20px;
-  }
+  margin: 0 40px;
 
   @include onPhone {
-    margin: 64px 12px;
-  }
-
-  &__header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    position: relative;
-  }
-
-  &__breadcrumbs {
-    position: absolute;
-
-    &-link {
-      color: #FAFAFA;
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 500;
-      text-decoration: none;
-    }
-  }
-
-  &__title {
-    max-width: 1126px;
-    text-align: center;
-    font-size: 56px;
-    font-style: normal;
-    font-weight: 700;
-    margin: 0 auto;
+    margin: 0 14px;
   }
 
   &__categories {
@@ -55,7 +21,7 @@
       border: 1px solid;
       border-color: #94CBFD #8CF8E5 #8CF8E5 #94CBFD;
       background: #1A1A1A;
-      margin-bottom: 80px;
+      margin-bottom: 56px;
       margin-top: 24px;
       
       &:hover {
@@ -71,6 +37,10 @@
       font-weight: 500;
       line-height: normal;
 
+      @include onPhone {
+        font-size: 16px;
+      }
+
       &:hover {
         color: #FAFAFA;
       }
@@ -79,16 +49,29 @@
     &-active {
       color: #FAFAFA;
     }
-}
+  }
 
-  &__container-latestnews {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    gap: 20px;
+  &__container {
+    padding-top: 124px;
 
     @include onTablet {
-      flex-wrap: wrap;
+      margin: 0 20px;
+    }
+  
+    @include onPhone {
+      margin: 0 12px;
+      padding-top: 72px;
+    }
+
+    &-latestnews {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      gap: 20px;
+
+      @include onTablet {
+        flex-wrap: wrap;
+      }
     }
   }
 
@@ -211,7 +194,7 @@
     align-items: flex-start;
     gap: 20px;
 
-    @media (max-width: 1060px) {
+    @include onTablet {
       flex-wrap: wrap;
     }
 

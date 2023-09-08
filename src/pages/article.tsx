@@ -21,6 +21,8 @@ const ArticlePage = () => {
             breadcrumbsUrl="digital"
       />
 
+      <Devider height="40px" />
+
       <main className="main">
         <article className="article">
 
@@ -47,6 +49,8 @@ const ArticlePage = () => {
           </div>
         </article>
       </main>
+
+      <Devider height="140px" />
 
       <footer>
         <Footer />

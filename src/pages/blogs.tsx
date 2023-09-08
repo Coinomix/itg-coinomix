@@ -12,6 +12,10 @@ import { BlockLatestNews } from "../components/BlockLatestNews";
 import { CardPost } from "../components/CardPost";
 import { BlockPageLinks } from "../components/BlockPageLinks";
 
+import imgBitcoin from "../assets/images/demo/bitcoin.jpg";
+import imgAppleLaptop from "../assets/images/demo/apple_laptop.jpg";
+import imgLaptopOne from "../assets/images/demo/laptop_1.jpg";
+
 const BlogsPage = () => {
   return (
     <>
@@ -37,13 +41,13 @@ const BlogsPage = () => {
             </div>
             <CardPost />
 
-            <CardPost />
+            <CardPost imgUrl={imgBitcoin} />
+
+            <CardPost imgUrl={imgAppleLaptop} />
 
             <CardPost />
 
-            <CardPost />
-
-            <CardPost />
+            <CardPost imgUrl={imgLaptopOne} />
 
           </div>
           <div className="blogs-page__sidebar">

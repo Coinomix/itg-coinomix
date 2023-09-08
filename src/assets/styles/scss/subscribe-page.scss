@@ -1,0 +1,25 @@
+.subscribe-page {
+  width: 100%;
+  padding: 125px 40px 0;
+
+  &__container {
+    border-radius: 24px;
+    border: 2px solid #2C2C2C;
+    background: #0F0F0F;
+  }
+
+  &__title {
+    color: #FAFAFA;
+    text-align: center;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    margin: 20px 0;
+  }
+
+  &__plans {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+}

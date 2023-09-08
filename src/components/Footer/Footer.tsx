@@ -1,12 +1,11 @@
 import React from "react";
+import { Link } from "gatsby";
 import "./Footer.scss";
 import logoCoinomix from "../../assets/images/coinimix-logo.svg";
 import iconlogoCoinomix from "../../assets/images/footer/itg_logo.svg";
 import iconTelegram from "../../assets/images/footer/telegram.svg";
 import iconInstagram from "../../assets/images/footer/instagram.svg";
 import iconYoutube from "../../assets/images/footer/youtube.svg";
-import { StaticImage } from "gatsby-plugin-image";
-import { Link } from "gatsby";
 
 export const Footer = () => {
   return (

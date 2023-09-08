@@ -38,11 +38,14 @@ export const CardPost: React.FC<Props> = ({ imgUrl = '' }) => {
           <Link to="/article" className="card-post__viewmore" title="View more">View more</Link>
         </div>
 
-        <div className="card-post__imagewrapper">
-          <Link to="/article">
-            <StaticImage className="card-post__image" src="../../assets/images/demo/bitcoin.jpg" alt="" />
-          </Link>
+        {imgUrl && (
+          <div className="card-post__imagewrapper">
+            <Link to="/article">
+              <img className="card-post__image" src={imgUrl} alt="" />
+            </Link>
         </div>
+          )}
+
         <div className="card-post__footer">
           <div className="card-post__social">
             <div className="card-post__social-content">

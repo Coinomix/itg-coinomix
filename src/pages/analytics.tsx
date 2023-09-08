@@ -22,21 +22,19 @@ import imgGpaphOne from "../assets/images/demo/graph_1.jpg";
 import imgGpaphTwo from "../assets/images/demo/graph_2.jpg";
 import imgEthereum from "../assets/images/demo/ethereum.png";
 import imgDemoOne from "../assets/images/demo/demo_1.jpg";
+import { PageTitle } from "../components/PageTitle";
 
 const AnalyticsPage = () => {
   return (
     <>
       <Header />
 
-      <main className="main">
-      <div className="main__header">
-          <div className="main__breadcrumbs">
-            <Link to="/" className="main__breadcrumbs-link">&lt; Home</Link>
-          </div>
-          <h1 className="main__title">Analytics</h1>
-          <div></div>
-        </div>
+      <PageTitle 
+            title="Analytics"
+            breadcrumbsTitle="Home"
+      />
 
+      <main className="main">
         <div className="main__categories">
           <div className="main__categories-container">
             <a href="#/" className="main__categories-link main__categories-active">Finance</a>

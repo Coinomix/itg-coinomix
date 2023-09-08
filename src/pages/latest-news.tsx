@@ -2,7 +2,6 @@ import * as React from "react";
 import "../assets/styles/scss/latest-news-page.scss"
 import { Link, type HeadFC } from "gatsby";
 import { Header } from "../components/Header";
-import "../assets/styles/scss/index.scss";
 import { Devider } from "../components/Devider";
 import { PageTitle } from "../components/PageTitle";
 import { CardLatestNews } from "../components/CardLatestNews";

@@ -17,7 +17,7 @@ export const PageTitle: React.FC <Props> = ({
   return (
     <div className="pagetitle">
       <div className="pagetitle__breadcrumbs">
-        <Link to={`/${breadcrumbsUrl}`} className="pagetitle__breadcrumbs-link">&lt; {breadcrumbsTitle}</Link>
+        <Link to={`/${breadcrumbsUrl}`} className="pagetitle__breadcrumbs-link">&lt; <span className="pagetitle__breadcrumbs-title">{breadcrumbsTitle}</span></Link>
       </div>
       <h1 className="pagetitle__title">{title}</h1>
   </div>
