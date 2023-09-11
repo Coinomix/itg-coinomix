@@ -1,67 +1,91 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import classNames from "classnames";
 import "./CardPlan.scss";
 import { CustomButton } from "../CustomButton";
 import { ButtonType, PlanType } from "../../types/enums";
-import classNames from "classnames";
 
 interface Props {
   type?: PlanType,
+  isyear: boolean,
 };
 
-const planLiteOptions = [
-  {option: '24/7 Live updates', include: true},
-  {option: 'In-depth investigations', include: true},
-  {option: '200+original stories daily', include: true},
-  {option: 'Unlimited access', include: false},
-  {option: 'Unlimited access', include: false},
-  {option: 'Unlimited access', include: false},
-];
+const planData = {
+  [PlanType.lite]: {
+    title: 'Lite plan',
+    subscribeType: ButtonType.subscribe_yellow,
+    yearCost: '29,99',
+    monthCost: '3,99',
+    options: [
+      { option: '24/7 Live updates', include: true },
+      { option: 'In-depth investigations', include: true },
+      { option: '200+ original stories daily', include: true },
+      { option: 'Unlimited access', include: false },
+      { option: 'Unlimited access', include: false },
+      { option: 'Unlimited access', include: false },
+    ],
+  },
+  [PlanType.basic]: {
+    title: 'Basic plan',
+    subscribeType: ButtonType.subscribe_blue,
+    yearCost: '59,99',
+    monthCost: '6,99',
+    options: [
+      { option: '24/7 Live updates', include: true },
+      { option: 'In-depth investigations', include: true },
+      { option: '200+ original stories daily', include: true },
+      { option: '200+ original stories daily', include: true },
+      { option: 'Unlimited access', include: false },
+      { option: 'Unlimited access', include: false },
+    ],
+  },
+  [PlanType.premium]: {
+    title: 'Premium plan',
+    subscribeType: ButtonType.subscribe_purple,
+    yearCost: '99,99',
+    monthCost: '10,99',
+    options: [
+      { option: '24/7 Live updates', include: true },
+      { option: 'In-depth investigations', include: true },
+      { option: '200+ original stories daily', include: true },
+      { option: 'Unlimited access', include: true },
+      { option: 'Unlimited access', include: true },
+      { option: 'Unlimited access', include: true },
+    ],
+  },
+};
 
-const planBasicOptions = [
-  {option: '24/7 Live updates', include: true},
-  {option: 'In-depth investigations', include: true},
-  {option: '200+original stories daily', include: true},
-  {option: '200+original stories daily', include: true},
-  {option: 'Unlimited access', include: false},
-  {option: 'Unlimited access', include: false}, 
-];
+export const CardPlan: React.FC<Props> = ({ type, isyear }) => {
+  const { title, subscribeType, yearCost, monthCost, options } = planData[type || PlanType.lite];
 
-const planPremiumOptions = [
-  {option: '24/7 Live updates', include: true},
-  {option: 'In-depth investigations', include: true},
-  {option: '200+original stories daily', include: true},
-  {option: 'Unlimited access', include: true},
-  {option: 'Unlimited access', include: true},
-  {option: 'Unlimited access', include: true},
-];
-
-export const CardPlan: React.FC<Props> = ({ type }) => {
   return (
-    <div className="card-plan">
-      <div className="card-plan__header">
-        <div className="card-plan__title">
-          Lite plan
+    <div className={classNames('cardplan', { [`cardplan-${type}`]: type })}>
+      <div className="cardplan__header">
+        <div className={classNames('cardplan__title', { [`cardplan__title-${type}`]: type })}>
+          {title}
         </div>
-        <div className="card-plan__price">
-          $29,99
+        <div className="cardplan__price">
+        {isyear 
+          ? `$${yearCost}`
+          : `$${monthCost}`
+          }
         </div>
-        <div className="card-plan__period">
-          Per year
+        <div className="cardplan__period">
+          {isyear 
+          ? ('Per year') 
+          : ('Per month')
+          }
         </div>
       </div>
-      <div className="card-plan__button">
-        <CustomButton text="Subscribe" type={ButtonType.subscribe_yellow} />
+      <div className="cardplan__button">
+        <CustomButton text="Subscribe" type={subscribeType} />
       </div>
-      <div className="card-plan__content">
-        <ul className="card-plan__options">
-          {planLiteOptions.map((option, index) => 
-            <li key={index} className={classNames('card-plan__option', { 'card-plan__option-true': option.include })}>{option.option}</li>
+      <div className="cardplan__content">
+        <ul className="cardplan__options">
+          {options.map((option, index) => 
+            <li key={index} className={classNames('cardplan__option', { 'cardplan__option-true': option.include })}>{option.option}</li>
           )}
         </ul>
       </div>
-      <div className="card-plan__readmore">
-        <a href="#" className="card-plan__readmore-link">Read more this plan</a>
-      </div>
     </div>
-  )
+  );
 };

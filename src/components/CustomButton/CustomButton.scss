@@ -56,4 +56,15 @@
       cursor: pointer;
     }
   }
+
+  &__subscribe-purple {
+    border: 0;
+    background: linear-gradient(90deg, #A394FD -0.6%, #F68CF8 101.11%);
+    color: #0F0F0F;
+
+    &:hover {
+      box-shadow: 0px 0px 30px 0px rgba(204, 144, 251, 0.25);
+      cursor: pointer;
+    }
+  }
 }

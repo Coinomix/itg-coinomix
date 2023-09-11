@@ -1,5 +1,5 @@
 import * as React from "react";
-import type { HeadFC } from "gatsby";
+import { Link, type HeadFC } from "gatsby";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import "../assets/styles/scss/index.scss";
@@ -42,8 +42,10 @@ const ArticlePage = () => {
                 <br/>
                 please, purchase a subscription
               </div>
-              <div  className="article__subscribe-button">
-                <CustomButton text="Subscribe" type={ButtonType.subscribe_blue} />
+              <div>
+                <Link to="/subscribe" className="article__subscribe-button">
+                  <CustomButton text="Subscribe" type={ButtonType.subscribe_blue} />
+                </Link>
               </div>
             </div>
           </div>

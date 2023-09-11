@@ -1,18 +1,34 @@
-.card-plan {
+@import "../../assets/styles/scss/variables";
+
+.cardplan {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  flex-shrink: 0;
-  height: 636px;
-  padding: 24px 24px 40px;
+  padding: 24px 24px 80px;
   border-radius: 24px;
-  border: 1px solid #2C2C2C;
-  background: #0F0F0F;
+  border: 1px solid #2c2c2c;
+  background: $color-black-bg;
 
-  &:hover {
-    border: 1px solid #EEFD94;
-    box-shadow: 0px 4px 60px 0px rgba(190, 251, 156, 0.10);
+  &-yellow {
+    &:hover {
+      border: 1px solid #eefd94;
+      box-shadow: 0px 4px 60px 0px rgba(190, 251, 156, 0.10);
+    }
+  }
+
+  &-blue {
+    &:hover {
+      border: 1px solid #94cbfd;
+      box-shadow: 0px 4px 60px 0px rgba(144, 225, 241, 0.10);
+    }
+  }
+
+  &-purple {
+    &:hover {
+      border: 1px solid #a394fd;
+      box-shadow: 0px 4px 60px 0px rgba(204, 144, 251, 0.10);
+    }
   }
 
   &__title {
@@ -21,10 +37,26 @@
     font-style: normal;
     font-weight: 600;
 
-    background: linear-gradient(90deg, #EEFD94 -0.6%, #8CF8A4 101.11%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    &-yellow {
+      background: linear-gradient(90deg, #EEFD94 -0.6%, #8CF8A4 101.11%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &-blue {
+      background: linear-gradient(90deg, #94CBFD -0.6%, #8CF8E5 101.11%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &-purple {
+      background: linear-gradient(90deg, #A394FD -0.6%, #F68CF8 101.11%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   &__price {
@@ -55,19 +87,43 @@
   }
 
   &__option {
-    color: #9D9D9D;
+    position: relative;
+    color: #9d9d9d;
     text-align: center;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -33px;
+      transform: translateY(-50%);
+      background-image: url('../../assets/images/close_ring_duotone_line.svg');
+      width: 25px;
+      height: 25px;
+    }
   }
 
   &__option-true {
-    color: #FAFAFA;
+    position: relative;
+    color: #fafafa;
     text-align: center;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -33px;
+      transform: translateY(-50%);
+      background-image: url('../../assets/images/check_ring_round.svg');
+      width: 25px;
+      height: 25px;
+    }
   }
 
   &__readmore {
