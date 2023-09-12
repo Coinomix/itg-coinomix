@@ -83,6 +83,7 @@ export default function SidebarLeft() {
           {title: 'Latest News', url: 'latest-news'},
           {title: 'Blogs', url: 'blogs'},
           {title: 'Subscribe', url: 'subscribe'},
+          {title: 'Page 404', url: '404'},
         ].map((object) => (
           <ListItem key={object.url} disablePadding>
             <ListItemButton>
@@ -103,6 +104,7 @@ export default function SidebarLeft() {
 
       <Drawer
         open={isOpenSidebar}
+        variant="temporary"
         onClose={toggleDrawer(false)}
       >
         <Input
@@ -119,6 +121,5 @@ export default function SidebarLeft() {
       </Drawer>
     </div>
     </ThemeProvider>
-
   );
 }

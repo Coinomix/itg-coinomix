@@ -82,7 +82,7 @@ export const CardPlan: React.FC<Props> = ({ type, isyear }) => {
       <div className="cardplan__content">
         <ul className="cardplan__options">
           {options.map((option, index) => 
-            <li key={index} className={classNames('cardplan__option', { 'cardplan__option-true': option.include })}>{option.option}</li>
+            <li key={index} className={classNames('cardplan__option', { 'cardplan__option-false': !option.include })}>{option.option}</li>
           )}
         </ul>
       </div>

@@ -3,6 +3,10 @@
 .main {
   margin: 0 40px;
 
+  @include onTablet {
+    margin: 0 20px;
+  }
+
   @include onPhone {
     margin: 0 14px;
   }
@@ -53,14 +57,9 @@
 
   &__container {
     padding-top: 124px;
-
-    @include onTablet {
-      margin: 0 20px;
-    }
   
     @include onPhone {
-      margin: 0 12px;
-      padding-top: 72px;
+      padding-top: 80px;
     }
 
     &-latestnews {

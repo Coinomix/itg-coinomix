@@ -24,11 +24,11 @@ export const SignIn = () => {
 
   return (
     <ThemeProvider theme={theme}>
-        <div className="header__user">
-          <img className="header__user-photo" src={demoUserImage} alt="Demo user photo" onClick={handleClick} />
-        </div>
+      <div className="header__user">
+        <img className="header__user-photo" src={demoUserImage} alt="Demo user photo" onClick={handleClick} />
+      </div>
 
-        <Menu
+      <Menu
         anchorEl={anchorEl}
         id="account-menu"
         open={open}
@@ -50,7 +50,7 @@ export const SignIn = () => {
         }}
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
-      >
+    >
         <Container>
           <Stack spacing={2} direction="row">
             <CustomButton text="Sign in" type={ButtonType.signin} />
@@ -58,6 +58,14 @@ export const SignIn = () => {
           </Stack>
         </Container>
         <Divider />
+        <Stack direction="row" spacing={1}>
+          <Avatar
+            alt="Cristina Oliveira"
+            src={demoUserImage}
+            sx={{ width: 56, height: 56 }}
+          />
+          <span>Cristiana Oliveira</span>
+        </Stack>
         <Divider />
         <MenuItem onClick={handleClose}>
           Profile

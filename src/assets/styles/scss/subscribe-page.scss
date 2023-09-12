@@ -5,7 +5,11 @@
   padding: 110px 40px 0;
 
   @include onTablet {
-    margin: 0 20px;
+    padding: 110px 20px 0;
+  }
+
+  @include onPhone {
+    padding: 72px 14px 0;
   }
 
   &__container {
@@ -13,6 +17,10 @@
     border-radius: 24px;
     border: 2px solid #2C2C2C;
     background: #0F0F0F;
+
+    @include onPhone {
+      border: 0;
+    }
   }
 
   &__close {
@@ -22,6 +30,10 @@
     transform: translateY(-50%);
     width: 28px;
     height: 28px;
+
+    @include onPhone {
+      display: none;
+    }
   }
 
   &__title {
@@ -31,6 +43,24 @@
     font-style: normal;
     font-weight: 600;
     margin: 20px 0;
+
+    @include onPhone {
+      font-size: 28px;
+      margin: 18px 0;
+    }
+  }
+
+  &__cancel {
+    color: #FAFAFA;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+
+    @include onPhone {
+      font-size: 14px;
+      margin: 18px 0;
+    }
   }
 
   &__plantoggler {
@@ -46,13 +76,5 @@
     flex-wrap: wrap;
     gap: 40px;
     margin: 40px 0 60px;
-  }
-
-  &__cancel {
-    color: #FAFAFA;
-    text-align: center;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
   }
 }
