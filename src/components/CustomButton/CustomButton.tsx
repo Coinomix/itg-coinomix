@@ -3,7 +3,6 @@ import classNames from "classnames";
 import "./CustomButton.scss";
 import { ButtonType } from "../../types/enums";
 
-
 interface Props {
   type?: ButtonType;
   text: string;

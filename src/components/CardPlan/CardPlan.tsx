@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import classNames from "classnames";
 import "./CardPlan.scss";
 import { CustomButton } from "../CustomButton";
 import { ButtonType, PlanType } from "../../types/enums";
 
+
 interface Props {
-  type?: PlanType,
-  isyear: boolean,
+  type: PlanType,
+  isYear: boolean,
+  onClick: (type: PlanType) => void;
 };
 
 const planData = {
@@ -54,8 +56,8 @@ const planData = {
   },
 };
 
-export const CardPlan: React.FC<Props> = ({ type, isyear }) => {
-  const { title, subscribeType, yearCost, monthCost, options } = planData[type || PlanType.lite];
+export const CardPlan: React.FC<Props> = ({ type, isYear: isyear, onClick }) => {
+  const { title, subscribeType, yearCost, monthCost, options } = planData[type];
 
   return (
     <div className={classNames('cardplan', { [`cardplan-${type}`]: type })}>
@@ -64,24 +66,24 @@ export const CardPlan: React.FC<Props> = ({ type, isyear }) => {
           {title}
         </div>
         <div className="cardplan__price">
-        {isyear 
+        {isyear
           ? `$${yearCost}`
           : `$${monthCost}`
           }
         </div>
         <div className="cardplan__period">
-          {isyear 
-          ? ('Per year') 
+          {isyear
+          ? ('Per year')
           : ('Per month')
           }
         </div>
       </div>
-      <div className="cardplan__button">
+      <div className="cardplan__button" onClick={() => onClick(type)}>
         <CustomButton text="Subscribe" type={subscribeType} />
       </div>
       <div className="cardplan__content">
         <ul className="cardplan__options">
-          {options.map((option, index) => 
+          {options.map((option, index) =>
             <li key={index} className={classNames('cardplan__option', { 'cardplan__option-false': !option.include })}>{option.option}</li>
           )}
         </ul>
