@@ -3,14 +3,15 @@ import classNames from "classnames";
 import "./CardPayPlan.scss";
 import { CustomButton } from "../CustomButton";
 import { ButtonType, PlanType } from "../../types/enums";
-import {PaymentsMethods} from "../../assets/images/payments_methods.svg";
-import TextField from '@mui/material/TextField';
+import {PaymentsMethods} from "../../assets/images/coinimix-logo.png";
 import { Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
+import { TextField } from "@mui/material";
 
 interface Props {
   type: PlanType,
   isYear: boolean,
+  onPay: () => void;
 };
 
 const planData = {
@@ -58,7 +59,7 @@ const planData = {
   },
 };
 
-export const CardPayPlan: React.FC<Props> = ({ type, isYear }) => {
+export const CardPayPlan: React.FC<Props> = ({ type, isYear, onPay }) => {
   const { title, subscribeType, yearCost, monthCost } = planData[type || PlanType.lite];
 
   return (
@@ -86,43 +87,65 @@ export const CardPayPlan: React.FC<Props> = ({ type, isYear }) => {
       <div className="cardpayplan__paybuttons">
           <span className="cardpayplan__text">Pay with</span>
 
-          <Link to="#" className="cardpayplan__button">
-            <CustomButton text="GooglePay" type={ButtonType.signin} />
+          <Link to="/payed" className="cardpayplan__button">
+            <CustomButton text="GooglePay" type={ButtonType.google} />
           </Link>
 
-          <Link to="#"  className="cardpayplan__button">
-            <CustomButton text="ApplePay" type={ButtonType.signup} />
+          <Link to="/payed"  className="cardpayplan__button">
+            <CustomButton text="ApplePay" type={ButtonType.apple} />
           </Link>
       </div>
-      <div>
-        <hr />
+      <div className="cardpayplan__orblock">
+        <hr className="cardpayplan__hr" />
         <span className="cardpayplan__or">
           or
         </span>
-        <hr />
+        <hr className="cardpayplan__hr" />
       </div>
       <div>
         <span className="cardpayplan__text">Pay with credit or debit card</span>
-        <GatsbyImage alt="Payments methods" image={PaymentsMethods} />
       </div>
-        <div className="cardpayplan__form">
-          <label>Number card
-            <input type="text" />
-          </label>
+      <div className="cardpayplan__form">
+        <label className="cardpayplan__label">
+          Number card
+        </label>
+        <input 
+          type="text"
+          placeholder="5555 4444 3333 2222"
+          className="cardpayplan__input"
+          maxLength={16}
+          required
+          />
         <div className="cardpayplan__exp">
           <div>
-            <label>Expiration
-              <input type="text" />
+            <label className="cardpayplan__label">
+              Expiration
             </label>
+            <input
+              type="text"
+              placeholder="MM/YY"
+              className="cardpayplan__input"
+              minLength={4}
+              maxLength={4}
+              required
+            />
           </div>
           <div>
-            <label>Security code
-              <input type="text" />
+            <label className="cardpayplan__label">
+              Security code
             </label>
+            <input
+              type="text"
+              placeholder="123"
+              className="cardpayplan__input"
+              minLength={3}
+              maxLength={3}
+              required
+            />
           </div>
         </div>
       </div>
-      <div className="cardpayplan__button">
+      <div className="cardpayplan__button" onClick={onPay}>
         <CustomButton text="Pay with credit or debit card" type={subscribeType} />
       </div>
     </div>

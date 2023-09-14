@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../assets/styles/scss/subscribe-page.scss";
-import { HeadFC, Link } from "gatsby";
+import { HeadFC, Link, navigate } from "gatsby";
 import { CardPlan } from "../components/CardPlan";
 import { Header } from "../components/Header";
 import { PlanType } from "../types/enums";
@@ -19,6 +19,10 @@ const SubscribePage = () => {
     setPayPlanType(() => plan);
   };
 
+  const handleFinishPay = () => {
+    navigate("/payed");
+  }
+
   return (
     <>
       <Header />
@@ -36,7 +40,7 @@ const SubscribePage = () => {
                 </div>
 
                 <div className="subscribe-page__cardpayplan">
-                  <CardPayPlan type={PayPlanType} isYear={isYearly} />
+                  <CardPayPlan type={PayPlanType} isYear={isYearly} onPay={handleFinishPay} />
                 </div>
               </>
             )

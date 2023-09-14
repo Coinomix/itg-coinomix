@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "../assets/styles/scss/subscribe-page.scss";
 import { HeadFC } from "gatsby";
 import { Header } from "../components/Header";
-import { CardPayPlan } from "../components/CardPayPlan";
-import { PlanType } from "../types/enums";
+import { Feedback } from "../components/Feedback";
+import kapybaraOk from "../assets/images/kapybara-ok.svg";
 
-const PayPage = () => {
+const PayedPage = () => {
   const [isYearly, setIsYearly] = useState(true);
 
   const handlePlanChange = () => {
@@ -18,13 +18,15 @@ const PayPage = () => {
 
       <main className="subscribe-page">
         <div className="subscribe-page__container">
-          <CardPayPlan />
+          <div className="subscribe-page__payed">
+            <Feedback link={"/"} imgUrl={kapybaraOk} />
+          </div>
         </div> 
       </main>
     </>
   );
 };
 
-export default PayPage;
+export default PayedPage;
 
-export const Head: HeadFC = () => <title>Pay Page | Coinomix</title>
+export const Head: HeadFC = () => <title>Payed Page | Coinomix</title>
