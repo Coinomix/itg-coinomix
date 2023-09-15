@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
 import demoUserImage from "../../assets/images/header/demo_user.jpg";
-import { Menu, MenuItem, Avatar, Divider, ListItemIcon, Button, Stack, Container, createTheme, ThemeProvider } from "@mui/material";
+import { Menu, MenuItem, Avatar, Divider, ListItemIcon, Button, Stack, Container, createTheme, ThemeProvider, Modal } from "@mui/material";
 import { CustomButton } from "../CustomButton";
 import { ButtonType } from "../../types/enums";
+import { CustomModal } from "../../components/CustomModal";
 
 const theme = createTheme({
   palette: {
@@ -13,6 +14,7 @@ const theme = createTheme({
 
 export const SignIn = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [modalShow, setModalShow] = React.useState(false);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -53,7 +55,10 @@ export const SignIn = () => {
     >
         <Container>
           <Stack spacing={2} direction="row">
-            <CustomButton text="Sign in" type={ButtonType.signin} />
+            <div onClick={() => setModalShow(true)}>
+              <CustomButton text="Sign in" type={ButtonType.signin} />
+            </div>
+            
             <CustomButton text="Sign up" type={ButtonType.signup} />
           </Stack>
         </Container>
@@ -84,6 +89,8 @@ export const SignIn = () => {
           Logout
         </MenuItem>
       </Menu>
+
+      <CustomModal show={modalShow} onHide={() => setModalShow(false)} />
 
         {/* <SingIn 
           show={modalShow}
