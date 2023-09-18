@@ -38,6 +38,21 @@
     }
   }
 
+  &__facebook {
+    border: 0;
+    background: #1877F2;
+    color: #FAFAFA;
+    cursor: pointer;
+
+    &-image {
+      background-image: url('../../assets/images/facebook_icon.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
   &__google {
     border: 0;
     background: #FAFAFA;

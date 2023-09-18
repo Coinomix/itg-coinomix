@@ -1,13 +1,17 @@
 import React, { useEffect, useRef } from "react";
 import "./CustomModal.scss";
 import { SignIn } from "./SignIn";
+import { SignUp } from "./SignUp";
+import { ForgotPassword } from "./ForgotPassword";
+import { ModalType } from "../../types/enums";
 
 interface Props {
-  show: boolean,
+  show: ModalType | null,
   onHide: () => void,
+  onOpen: (type: ModalType) => void,
 }
 
-export const CustomModal: React.FC<Props> = ({ show = false, onHide }) => {
+export const CustomModal: React.FC<Props> = ({ show, onHide, onOpen }) => {
   useEffect(() => {
     const closeModalOnEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -15,7 +19,7 @@ export const CustomModal: React.FC<Props> = ({ show = false, onHide }) => {
       }
     };
 
-    if (show) {
+    if (show !== null) {
       document.addEventListener("keydown", closeModalOnEscape);
     }
 
@@ -26,7 +30,7 @@ export const CustomModal: React.FC<Props> = ({ show = false, onHide }) => {
 
   return (
     <>
-    {show && (
+    {(show !== null) && (
       <div className="custommodal">
       <div className="custommodal__container">
         <div className="custommodal__close" onClick={onHide}>
@@ -36,7 +40,15 @@ export const CustomModal: React.FC<Props> = ({ show = false, onHide }) => {
             </svg>
         </div>
         <div className="custommodal__content">
-          <SignIn />
+          {(show === ModalType.signin) &&
+            <SignIn onOpen={onOpen} />
+          }
+          {(show === ModalType.signup) &&
+            <SignUp onOpen={onOpen} />
+          }
+          {(show === ModalType.forgotpass) &&
+            <ForgotPassword />
+          }
         </div>
       </div>
       </div>

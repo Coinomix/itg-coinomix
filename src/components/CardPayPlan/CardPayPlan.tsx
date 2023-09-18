@@ -110,7 +110,7 @@ export const CardPayPlan: React.FC<Props> = ({ type, isYear, onPay }) => {
           Number card
         </label>
         <input 
-          type="number"
+          type="text"
           name="cardnumber"
           placeholder="5555 4444 3333 2222"
           className="cardpayplan__input"
@@ -123,7 +123,7 @@ export const CardPayPlan: React.FC<Props> = ({ type, isYear, onPay }) => {
               Expiration
             </label>
             <input
-              type="number"
+              type="text"
               name="cardexp"
               placeholder="MM/YY"
               className="cardpayplan__input"
@@ -137,7 +137,7 @@ export const CardPayPlan: React.FC<Props> = ({ type, isYear, onPay }) => {
               Security code
             </label>
             <input
-              type="number"
+              type="text"
               name="cardcode"
               placeholder="123"
               className="cardpayplan__input"

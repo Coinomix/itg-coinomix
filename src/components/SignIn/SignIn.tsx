@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import demoUserImage from "../../assets/images/header/demo_user.jpg";
 import { Menu, MenuItem, Avatar, Divider, ListItemIcon, Button, Stack, Container, createTheme, ThemeProvider, Modal } from "@mui/material";
 import { CustomButton } from "../CustomButton";
-import { ButtonType } from "../../types/enums";
+import { ButtonType, ModalType } from "../../types/enums";
 import { CustomModal } from "../../components/CustomModal";
 
 const theme = createTheme({
@@ -14,7 +14,7 @@ const theme = createTheme({
 
 export const SignIn = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const [modalShow, setModalShow] = React.useState(false);
+  const [modalShow, setModalShow] = React.useState<ModalType | null>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -52,14 +52,15 @@ export const SignIn = () => {
         }}
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
-    >
+      >
         <Container>
           <Stack spacing={2} direction="row">
-            <div onClick={() => setModalShow(true)}>
+            <div onClick={() => setModalShow(ModalType.signin)}>
               <CustomButton text="Sign in" type={ButtonType.signin} />
             </div>
-            
-            <CustomButton text="Sign up" type={ButtonType.signup} />
+            <div onClick={() => setModalShow(ModalType.signup)}>
+              <CustomButton text="Sign up" type={ButtonType.signup} />
+            </div>
           </Stack>
         </Container>
         <Divider />
@@ -90,7 +91,7 @@ export const SignIn = () => {
         </MenuItem>
       </Menu>
 
-      <CustomModal show={modalShow} onHide={() => setModalShow(false)} />
+      <CustomModal show={modalShow} onOpen={(type: ModalType) => setModalShow(type)} onHide={() => setModalShow(null)} />
 
         {/* <SingIn 
           show={modalShow}

@@ -150,6 +150,12 @@
     margin-top: 4px;
     outline: none;
 
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
     &:focus {
       border: 1px solid $color-white;
     }
